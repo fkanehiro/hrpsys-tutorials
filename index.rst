@@ -11,6 +11,10 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   basics/index
+   advanced/index
+   gazebo/index
+   choreonoid/index
 
 
 Indices and tables
