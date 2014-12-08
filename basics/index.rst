@@ -1,6 +1,6 @@
-======
-Basics
-======
+===========
+Basic Usage
+===========
 
 Contents:
 

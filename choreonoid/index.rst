@@ -8,3 +8,7 @@ Contents:
    :maxdepth: 2
 
    install
+   kinematics
+   motion
+   physics
+   connect
