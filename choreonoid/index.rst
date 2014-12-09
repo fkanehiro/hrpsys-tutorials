@@ -1,5 +1,5 @@
 =====================
- Use with choreonoid
+ Use with Choreonoid
 =====================
 
 Contents:
