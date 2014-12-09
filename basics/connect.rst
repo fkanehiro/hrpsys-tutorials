@@ -6,14 +6,8 @@ In this tutorial, we will learn how to connect simulation to our own controller.
 
 .. note::
 
-   Please finish :doc:`project` tutorial, before proceeding to this tutorial.
+   Please finish :doc:`project` tutorial, before proceed.
 
-
-As we have learned in previous tutorial, project file in hrpsys-simulatior is written in xml format. You can use your favorite text editor to create the project file.
-
-Open the project file with your text editor::
-
-  $ emacs mysimulation.xml
 
 Configuration
 =============
@@ -23,6 +17,7 @@ Before proceed, create configuration file named "rtc.conf" under the current fol
 .. code-block:: ini
    :linenos:
 
+   corba.nameservers: 127.0.0.1
    naming.formats: %n.rtc
    logger.enable: YES
    logger.log_level: NORMAL
@@ -34,6 +29,12 @@ Before proceed, create configuration file named "rtc.conf" under the current fol
 
 Basic structure of project file
 ===============================
+
+As we have learned in previous tutorial, project file in hrpsys-simulatior is written in xml format. You can use your favorite text editor to create the project file.
+
+Open the project file with your text editor::
+
+  $ emacs mysimulation.xml
 
 After the editor is opened, you will see following contents.
 
@@ -163,4 +164,5 @@ Now, we have finished configuring our system. Let's open the project in hrpsys-s
 
 After the simulator has opened, set a reference parameter to the "angleRef" port of "PDController0" component instance by following rtshell command::
 
-  $ rtinject /localhost/`hostname`.cxt/PDController0.rtc.angleRef
+  $ rtinject -c 'RTC.TimedDoubleSeq({time}, [100,100])' /localhost/vehicle0.rtc:ddqRef
+
