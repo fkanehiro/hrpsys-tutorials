@@ -3,11 +3,11 @@
   <mode name="Simulation">
     <item class="com.generalrobotix.ui.item.GrxRTSItem" name="untitled" select="true">
       <property name="vehicle0.period" value="0.005"/>
-      <property name="CameraImageViewer0.factory" value="CameraImageViewer"/>
       <property name="CameraImageViewer0.period" value="0.5"/>
+      <property name="CameraImageViewer0.factory" value="CameraImageViewer"/>
       <property name="connection" value="vehicle0.VISION_SENSOR1:CameraImageViewer0.imageIn"/>
     </item>
-    <item class="com.generalrobotix.ui.item.GrxModelItem" name="vehicle0" select="true" url="$(PROJECT_DIR)/../model/simple_vehicle_with_camera.wrl">
+    <item class="com.generalrobotix.ui.item.GrxModelItem" name="vehicle0" select="true" url="$(CURRENT_DIR)/simple_vehicle_with_color_camera.wrl">
       <property name="isRobot" value="true"/>
       <property name="rtcName" value="vehicle0"/>
       <property name="inport" value="qRef:JOINT_VALUE"/>
