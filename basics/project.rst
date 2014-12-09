@@ -109,6 +109,36 @@ The final "BODY.translation" part specifies the position of the robot model in t
 
 Now, we have finished creating our own simulation project. Let's open the project in hrpsys-simulator::
 
-  $ hrpsys-simulator myproject.xml
+  $ hrpsys-simulator myproject.xml -showsensors
+
+Can you see the robot in the world? You have probably seen empty world! In fact, we had to create a floor to support our vehicle to stay within our sight.
+
+Please add following lines to the project file:
+
+.. code-block:: xml
+   :linenos:
+
+   <item class="com.generalrobotix.ui.item.GrxModelItem" name="vehicle0" select="true" url="$(PROJECT_DIR)/../model/simple_vehicle_with_camera.wrl">
+      <property name="isRobot" value="true"/>
+      <property name="rtcName" value="vehicle0"/>
+      <property name="inport" value="qRef:JOINT_VALUE"/>
+      <property name="inport" value="dqRef:JOINT_VELOCITY"/>
+      <property name="inport" value="ddqRef:JOINT_ACCELERATION"/>
+      <property name="outport" value="q:JOINT_VALUE"/>
+      <property name="outport" value="VISION_SENSOR1:VISION_SENSOR1:VISION_SENSOR"/>
+      <property name="BODY.translation" value="0.0 0.0 0.2"/>
+   </item>
+   <item class="com.generalrobotix.ui.item.GrxModelItem" name="longfloor" select="true" url="$(PROJECT_DIR)/../model/longfloor.wrl">
+      <property name="isRobot" value="false"/>
+      <property name="WAIST.translation" value="0.0 0.0 -0.1 "/>
+   </item>
+   <item class="com.generalrobotix.ui.item.GrxCollisionPairItem" name="CP#floor#vehicle0" select="true">
+      <property name="objectName2" value="vehicle0"/>
+      <property name="objectName1" value="longfloor"/>
+   </item>
+
+Now, let's open the project in hrpsys-simulator::
+
+  $ hrpsys-simulator myproject.xml -showsensors
 
 In the next tutorial, we will learn how to connect the robot to our own controller.

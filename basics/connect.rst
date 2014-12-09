@@ -15,6 +15,22 @@ Open the project file with your text editor::
 
   $ emacs mysimulation.xml
 
+Configuration
+=============
+
+Before proceed, create configuration file named "rtc.conf" under the current folder (or place it to /etc/rtc.conf if you want to apply the configuration globally) with following content.
+
+.. code-block:: ini
+   :linenos:
+
+   naming.formats: %n.rtc
+   logger.enable: YES
+   logger.log_level: NORMAL
+   logger.file_name: stdout
+   manager.shutdown_onrtcs: NO
+   manager.is_master: YES
+   manager.modules.load_path: /usr/lib,/usr/local/lib
+
 
 Basic structure of project file
 ===============================
