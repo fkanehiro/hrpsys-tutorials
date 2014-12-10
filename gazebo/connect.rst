@@ -30,7 +30,7 @@ Before proceed, create configuration file named "rtc.conf" under the current fol
 Basic structure of project file
 ===============================
 
-As we have learned in previous tutorial, project file in hrpsys-simulatior is written in xml format. You can use your favorite text editor to create the project file.
+As we have learned in previous tutorial, project file in hrpsys-gazebo-simulatior is written in xml format. You can use your favorite text editor to create the project file.
 
 Open the project file with your text editor::
 
@@ -52,15 +52,14 @@ After the editor is opened, you will see following contents.
             <property name="connection" value="HGcontroller0.dqOut:PA10Controller(Robot)0.dqRef"/>
             <property name="connection" value="HGcontroller0.ddqOut:PA10Controller(Robot)0.ddqRef"/>
         </item>
-        <item class="com.generalrobotix.ui.item.GrxModelItem" name="vehicle0" select="true" url="$(PROJECT_DIR)/../model/simple_vehicle_with_camera.wrl">
+        <item class="com.generalrobotix.ui.item.GrxModelItem" name="simple_vehicle_with_camera" select="true" url="model://simple_vehicle_with_camera">
             <property name="isRobot" value="true"/>
             <property name="rtcName" value="vehicle0"/>
             <property name="inport" value="qRef:JOINT_VALUE"/>
             <property name="inport" value="dqRef:JOINT_VELOCITY"/>
             <property name="inport" value="ddqRef:JOINT_ACCELERATION"/>
             <property name="outport" value="q:JOINT_VALUE"/>
-            <property name="outport" value="VISION_SENSOR1:VISION_SENSOR1:VISION_SENSOR"/>
-            <property name="BODY.translation" value="0.0 0.0 0.2"/>
+            <property name="outport" value="VISION_SENSOR1:/simple_vehicle_with_camera/VISION_SENSOR1/left/image_raw:VISION_SENSOR"/>
         </item>
         ..snip..
       </mode>
@@ -104,9 +103,9 @@ As a result, following system will be generated from this configuration:
       "vehicle0" -> "CameraImageViewer0" [headlabel="VISION_SENSOR1", taillabel="imageIn", labeldistance=6];
    }
 
-Now, we have finished configuring our system. Let's open the project in hrpsys-simulator::
+Now, we have finished configuring our system. Let's open the project in hrpsys-gazebo-simulator::
 
-  $ hrpsys-simulator myproject.xml -realtime -endless
+  $ hrpsys-gazebo-simulator myproject.xml $HOME/.gazebo/models/simple_vehicle_with_camera.world -endless
 
 
 Connect with original RT-component
@@ -155,7 +154,7 @@ Add following lines to myproject.xml  to instantiate and connect the **svcontrol
       <property name="svcontrol0.factory" value="svcontrol"/>
       <property name="svcontrol0.period" value="0.05"/>
       <property name="connection" value="vehicle0.VISION_SENSOR1:CameraImageViewer0.imageIn"/>
-      <property name="connection" value="svcontrol0.q:vehicle0.dqRef"/>
+      <property name="connection" value="svcontrol0.q:vehicle0.ddqRef"/>
    </item>
 
 As a result, following system will be generated from this configuration:
@@ -164,10 +163,10 @@ As a result, following system will be generated from this configuration:
 
    digraph foo {
       rankdir=LR
-      "svcontrol0" -> "vehicle0" [headlabel="q", taillabel="dqRef", labeldistance=4];
+      "svcontrol0" -> "vehicle0" [headlabel="q", taillabel="ddqRef", labeldistance=4];
       "vehicle0" -> "CameraImageViewer0" [headlabel="VISION_SENSOR1", taillabel="imageIn", labeldistance=6];
    }
 
-Now, we have finished configuring our system. Let's open the project in hrpsys-simulator::
+Now, we have finished configuring our system. Let's open the project in hrpsys-gazebo-simulator and confirm the result::
 
-  $ hrpsys-simulator myproject.xml -realtime -endless
+  $ hrpsys-gazebo-simulator myproject.xml $HOME/.gazebo/models/simple_vehicle_with_camera.world -endless

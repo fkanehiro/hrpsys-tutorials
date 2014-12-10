@@ -1,0 +1,153 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: hrpsys tutorials 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-11 02:11+0900\n"
+"PO-Revision-Date: 2014-12-11 05:04+0900\n"
+"Last-Translator: Yosuke Matsusaka <yosuke.matsusaka@gmail.com>\n"
+"Language-Team:  <yosuke.matsusaka@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: ja\n"
+
+#: ../../choreonoid/index.rst:3
+msgid "Use with Choreonoid"
+msgstr "Choreonoidとの接続"
+
+#: ../../choreonoid/index.rst:5
+msgid "Contents:"
+msgstr "目次:"
+
+#: ../../choreonoid/install.rst:3
+msgid "Install"
+msgstr "インストール"
+
+#: ../../choreonoid/install.rst:6
+msgid "Using ppa"
+msgstr "PPAを使ったインストール（推奨）"
+
+#: ../../choreonoid/install.rst:10
+msgid "From source"
+msgstr "ソースコードからのインストール"
+
+#: ../../choreonoid/kinematics.rst:3
+msgid "Controlling robot with forward and inverse kinematics"
+msgstr "順運動学と逆運動学を使ったロボットの操作"
+
+#: ../../choreonoid/kinematics.rst:5
+msgid ""
+"One of the main feature of choreonoid is it can control and create a motion "
+"of the robot using built in inverse kinematics calculation algorithm. In "
+"this tutorial, we will learn how to use the kinematics control features."
+msgstr ""
+"Choreonoidの主要な機能の一つは、内蔵の逆運動学アルゴリズムを使ってロボットを"
+"操作しモーションを作成することができます。このチュートリアルでは、これら順逆"
+"の運動学の機能の使い方を学習します。"
+
+#: ../../choreonoid/kinematics.rst:9
+msgid "Loading the robot model"
+msgstr "ロボットモデルのロード"
+
+#: ../../choreonoid/kinematics.rst:11
+msgid "Select \"File\" -> \"Open...\" -> \"OpenHRP Model File\" menu item."
+msgstr ""
+"メニューから、\"File\" -> \"Open...\" -> \"OpenHRP Model File\"を選択します。"
+
+#: ../../choreonoid/kinematics.rst:15
+msgid "Select and open \"(source folder)/share/model/PA10.wrl\" file."
+msgstr "\"(source folder)/share/model/PA10.wrl\"ファイルを開きます。"
+
+#: ../../choreonoid/kinematics.rst:19
+msgid ""
+"Select and check \"PA10\" item from the items panel and the robot will be "
+"appeared in the scene panel."
+msgstr ""
+"アイテムパネルから \"PA10\"を選択しチェックボックスをチェックします。すると"
+"シーンパネルにロボットが現れるはずです。"
+
+#: ../../choreonoid/kinematics.rst:25
+msgid "Control the robot by forward kinematics"
+msgstr "順運動学を使ったロボットの操作"
+
+#: ../../choreonoid/kinematics.rst:27
+msgid "First, press the \"Forward Kinematics Mode\" button."
+msgstr " \"Forward Kinematics Mode\"ボタンをクリックします。"
+
+#: ../../choreonoid/kinematics.rst:31 ../../choreonoid/kinematics.rst:45
+msgid ""
+"Also, press \"Enable link orientation editing\" button. This will enable you "
+"to control the joint of the robot directly under the scene panel."
+msgstr ""
+"\"Enable link orientation editing\"ボタンもクリックします。このボタンをクリッ"
+"クすることで、シーンパネル上でのクリック操作でロボットの操作ができるようにな"
+"ります。"
+
+#: ../../choreonoid/kinematics.rst:35
+msgid ""
+"You can control each joints of the robot by using the \"Joint Sliders\" "
+"panel or by clicking the joints and links of the robot directly on the "
+"\"Scene\" panel."
+msgstr ""
+"\"Joint Sliders\"パネルかシーンパネル上のロボットを直接クリックすることでロ"
+"ボットの各関節が操作できます。"
+
+#: ../../choreonoid/kinematics.rst:39
+msgid "Control the robot by inverse kinematics"
+msgstr "逆運動学を使ったロボットの操作"
+
+#: ../../choreonoid/kinematics.rst:41
+msgid ""
+"To use inverse kinematics based control, press the \"Inverse Kinematics Mode"
+"\" button."
+msgstr ""
+"逆運動学を使ってロボットを操作するには、\"Inverse Kinematics Mode\"ボタンをク"
+"リックしてください。"
+
+#: ../../choreonoid/kinematics.rst:49
+msgid ""
+"You can control the robot by clicking the joints and links of the robot "
+"directly on the \"Scene\" panel."
+msgstr ""
+"シーンパネル上のロボットの関節やリンクを直接クリックすることでロボットが操作"
+"できます。"
+
+#: ../../choreonoid/motion.rst:3
+msgid "Creating motion sequence"
+msgstr "モーションの作成"
+
+#: ../../choreonoid/motion.rst:5
+msgid ""
+"This tutorial explains how to configure and apply motion sequence creation "
+"in choreonoid."
+msgstr "このチュートリアルでは、Choreonoidを使ってモーション"
+
+#: ../../choreonoid/motion.rst:8 ../../choreonoid/physics.rst:8
+msgid "Configuration"
+msgstr "設定"
+
+#: ../../choreonoid/motion.rst:10
+msgid "Create pose roll item."
+msgstr "ポーズロールアイテムを作成します。"
+
+#: ../../choreonoid/motion.rst:12 ../../choreonoid/physics.rst:12
+msgid "Open robot model."
+msgstr "ロボットモデルを開きます。"
+
+#: ../../choreonoid/physics.rst:3
+msgid "Physics simulation"
+msgstr "物理シミュレーションの実行"
+
+#: ../../choreonoid/physics.rst:5
+msgid ""
+"This tutorial explains how to configure and apply physics simulation in "
+"choreonoid."
+msgstr ""
+"このチュートリアルでは、Choreonoidを使って物理シミュレーションを行う方法を説"
+"明します。"
+
+#: ../../choreonoid/physics.rst:10
+msgid "Create Physics simulation item."
+msgstr "物理シミュレーションアイテムを作成します。"

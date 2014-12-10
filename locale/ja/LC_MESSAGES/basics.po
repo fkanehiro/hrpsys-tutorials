@@ -1,0 +1,565 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: hrpsys tutorials 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-11 02:11+0900\n"
+"PO-Revision-Date: 2014-12-11 05:04+0900\n"
+"Last-Translator: Yosuke Matsusaka <yosuke.matsusaka@gmail.com>\n"
+"Language-Team:  <yosuke.matsusaka@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: ja\n"
+
+#: ../../basics/connect.rst:3
+msgid "Connect"
+msgstr "接続による拡張"
+
+#: ../../basics/connect.rst:5
+msgid ""
+"In this tutorial, we will learn how to connect simulation to our own "
+"controller."
+msgstr ""
+"このチュートリアルでは、シミュレータを自作のコントローラに接続する方法を学習"
+"します。"
+
+#: ../../basics/connect.rst:9
+msgid "Please finish :doc:`project` tutorial, before proceed."
+msgstr ""
+":doc:`project`　チュートリアルを済ませていない人は先に学習してください。"
+
+#: ../../basics/connect.rst:13
+msgid "Configuration"
+msgstr "設定"
+
+#: ../../basics/connect.rst:15
+msgid ""
+"Before proceed, create configuration file named \"rtc.conf\" under the "
+"current folder (or place it to /etc/rtc.conf if you want to apply the "
+"configuration globally) with following content."
+msgstr ""
+"この先に進む前に、以下の内容の \"rtc.conf\" ファイルをカレントフォルダに作成"
+"してください（/etc/rtc.confに作成することで同じ設定をコンピュータ全体に適用す"
+"ることもできます）。"
+
+#: ../../basics/connect.rst:31 ../../basics/project.rst:19
+msgid "Basic structure of project file"
+msgstr "プロジェクトファイルの基本構成"
+
+#: ../../basics/connect.rst:33
+msgid ""
+"As we have learned in previous tutorial, project file in hrpsys-simulatior "
+"is written in xml format. You can use your favorite text editor to create "
+"the project file."
+msgstr ""
+"前のチュートリアルで学習したように、hrpsys-simulatorのプロジェクトファイルは"
+"XML形式で記述します。お好きなテキストエディターを使ってプロジェクトファイルを"
+"作成してください。"
+
+#: ../../basics/connect.rst:35
+msgid "Open the project file with your text editor::"
+msgstr "テキストファイルでプロジェクトファイルを開きます::"
+
+#: ../../basics/connect.rst:39 ../../basics/project.rst:21
+msgid "After the editor is opened, you will see following contents."
+msgstr ""
+"テキストエディタでプロジェクトファイルを開くと以下の内容になっているはずで"
+"す。"
+
+#: ../../basics/connect.rst:69
+msgid ""
+"To connect the simulator to the external control process, we will modify "
+"**com.generalrobotix.ui.item.GrxRTSItem** configuration item type."
+msgstr ""
+"シミュレータを外部の制御プロセスに接続するために**com.generalrobotix.ui.item."
+"GrxRTSItem**を編集します。"
+
+#: ../../basics/connect.rst:71
+msgid ""
+"In  **com.generalrobotix.ui.item.GrxRTSItem** configuration item type, the "
+"name \"*.period\" is used to specify execution cycle of each RT-components. "
+"The name \"*.factory\" is used to specify the name of shared library used to "
+"create the instance of the component (described later). Properties with name "
+"\"connection\" specify the connection between the components."
+msgstr ""
+"**com.generalrobotix.ui.item.GrxRTSItem**設定項目では、\"*.period\"が各RTコン"
+"ポーネントの実行周期を設定します。\"*.factory\"はコンポーネントのインスタンス"
+"を作成するのに用いられる共有ライブラリを設定します（詳細はあとで説明しま"
+"す）。\"connection\"はコンポーネント間の接続を設定します。"
+
+#: ../../basics/connect.rst:74
+msgid "Create instance of RT-component"
+msgstr "RTコンポーネントのインスタンスを作成する"
+
+#: ../../basics/connect.rst:76
+msgid ""
+"hrpsys-base is not only a simulation environment, but also provide various "
+"components which can be used in your system."
+msgstr ""
+"hrpsys-baseはシミュレーション環境を提供するだけでなく、システム構築に利用する"
+"ことができる様々なコンポーネントも提供します。"
+
+#: ../../basics/connect.rst:78
+msgid "Please refer to this page to see list of all the available components:"
+msgstr "すべてのコンポーネントのリストを以下のページから一覧できます:"
+
+#: ../../basics/connect.rst:80
+msgid "http://fkanehiro.github.io/hrpsys-base/"
+msgstr ""
+
+#: ../../basics/connect.rst:82
+msgid ""
+"In the previous tutorial, we have configured our project to use "
+"\"simple_vehicle_with_camera\" robot model which has virtual camera "
+"interface. In this tutorial, let's use **CameraImageViewer** component to "
+"monitor the camera input."
+msgstr ""
+"前のチュートリアルでは仮想カメラを持った\"simple_vehicle_with_camera\"ロボッ"
+"トモデルを使うようにプロジェクトを設定しました。今回のチュートリアルでは、"
+"**CameraImageViewer**コンポーネントを使ってカメラからの入力を表示してみましょ"
+"う。"
+
+#: ../../basics/connect.rst:84
+msgid ""
+"To use the component, we first define the **factory** property to create an "
+"instance of the component. In below example, \"CameraImageViewer0\" is the "
+"name of the instance. \"CameraImageViewer\" is the name of the component "
+"itself. We also define the **period** property to set the execution cycle to "
+"0.5 (twice a second)."
+msgstr ""
+"RTコンポーネントを使うためには、まず**factory**プロパティを設定してコンポーネ"
+"ントのインスタンスを作成します。以下の例では\"CameraImageViewer0\"がインスタ"
+"ンスの名前です。\"CameraImageViewer\"はコンポーネントの名前です。コンポーネン"
+"トの実行周期を設定するために**period**プロパティも定義します。"
+
+#: ../../basics/connect.rst:86
+msgid ""
+"Then, we also define a connection from \"VISION_SENSOR1\" port of "
+"\"vehicle0\" robot model to \"imageIn\" port of \"CameraImageViewer0\" "
+"component instance."
+msgstr ""
+"そして、\"vehicle0\"コンポーネントの\"VISION_SENSOR1\"ポートと"
+"\"CameraImageViewer0\"コンポーネントの \"imageIn\"ポートを接続します。"
+
+#: ../../basics/connect.rst:98 ../../basics/connect.rst:161
+msgid ""
+"As a result, following system will be generated from this configuration:"
+msgstr "結果として、この設定から以下のようなシステムが生成されます:"
+
+#: ../../basics/connect.rst:107 ../../basics/connect.rst:171
+msgid ""
+"Now, we have finished configuring our system. Let's open the project in "
+"hrpsys-simulator::"
+msgstr ""
+"これでシステムの設定は終了です。hrpsys-simulatorでプロジェクトを開いてみま"
+"しょう::"
+
+#: ../../basics/connect.rst:113
+msgid "Connect with original RT-component"
+msgstr "オリジナルのRTコンポーネントとの接続"
+
+#: ../../basics/connect.rst:115
+msgid ""
+"Here, we create original RT-component named \"svcontrol\". First invoke "
+"following command to generate a skeleton code::"
+msgstr ""
+"ここでは\"svcontrol\"という名前のオリジナルのコンポーネントを作成します。まず"
+"はスケルトンコードを生成するために以下のコマンドを実行してください::"
+
+#: ../../basics/connect.rst:119
+msgid "Uncomment following line in generated svcontrol.h:"
+msgstr "生成されたファイルsvcontrol.hの以下の部分をアンコメントします:"
+
+#: ../../basics/connect.rst:125
+msgid "Uncomment and add following lines in svcontrol.cpp:"
+msgstr "ファイルsvcontrol.cppの以下の部分をアンコメントし追記します:"
+
+#: ../../basics/connect.rst:140
+msgid "Then compile the component::"
+msgstr "コンポーネントをコンパイルします::"
+
+#: ../../basics/connect.rst:144
+msgid ""
+"This component will give constant power to all the joints of the robot model."
+msgstr ""
+"このコンポーネントはロボットモデルのすべての関節に一定の力を加える制御をしま"
+"す。"
+
+#: ../../basics/connect.rst:146
+msgid ""
+"Add following lines to myproject.xml  to instantiate and connect the "
+"**svcontrol** component."
+msgstr ""
+"**svcontrol**コンポーネントをインスタンス化し、シミュレータに接続するために、"
+"myproject.xmlに以下の設定を追加してください。"
+
+#: ../../basics/index.rst:3
+msgid "Basic Usage"
+msgstr "基本的な使い方"
+
+#: ../../basics/index.rst:5
+msgid "Contents:"
+msgstr "目次:"
+
+#: ../../basics/install.rst:3
+msgid "Install"
+msgstr "インストール"
+
+#: ../../basics/install.rst:6
+msgid "Install using ppa (recommended)"
+msgstr "PPAを使ったインストール（推奨）"
+
+#: ../../basics/install.rst:15
+msgid "Install from source"
+msgstr "ソースコードからのインストール"
+
+#: ../../basics/install.rst:19
+msgid ""
+"Source based installation is hard way. ppa based installation is highly "
+"recommended."
+msgstr ""
+"ソースコードからのインストールは様々なライブラリをインストールしなければなら"
+"ないため推奨されません。通常はppaによるインストールを行ってください。"
+
+#: ../../basics/install.rst:22
+msgid "To install from source, we first need to install depending libraries."
+msgstr ""
+"ソースコードからインストールするには、まず依存するライブラリをインストールす"
+"る必要があります。"
+
+#: ../../basics/install.rst:28
+msgid "Clone most recent source from github."
+msgstr "githubから最新のソースをクローンします。"
+
+#: ../../basics/install.rst:34
+msgid "Then, run cmake and make to configure, compile and install."
+msgstr ""
+"設定、コンパイル、インストールを行うためにcmakeコマンドとmakeコマンドを実行し"
+"ます。"
+
+#: ../../basics/project.rst:3
+msgid "Create your own project"
+msgstr "オリジナルのプロジェクトの作成"
+
+#: ../../basics/project.rst:5
+msgid "In this tutorial, we will learn how to create your own project."
+msgstr ""
+"このチュートリアルでは、オリジナルのプロジェクトを作成する方法を学習します。"
+
+#: ../../basics/project.rst:7
+msgid ""
+"Project file in hrpsys-simulatior is written in xml format. You can use your "
+"favorite text editor to create the project file."
+msgstr ""
+"hrpsys-simulatorのプロジェクトファイルはXML形式で記述します。プロジェクトファ"
+"イルの編集には好きなテキストエディタを使用してください。"
+
+#: ../../basics/project.rst:9
+msgid ""
+"We will first copy the sample project file to local directory to create our "
+"own project::"
+msgstr "サンプルプロジェクトをローカルディレクトリにコピーします::"
+
+#: ../../basics/project.rst:13
+msgid ""
+"Open the project file with your favorite text editor (here, we use emacs)::"
+msgstr ""
+"好きなテキストエディタでプロジェクトファイルを開いてください（ここではemacsを"
+"使います）::"
+
+#: ../../basics/project.rst:47
+msgid ""
+"To create our simulation project, we have to edit each configuration items. "
+"Each types of configuration items are distinguished with **class "
+"attributes**. hrpsys-simulator currently has following configuration item "
+"types:"
+msgstr ""
+"オリジナルのシミュレーションプロジェクトを作成するには、各設定項目を編集する"
+"必要があります。各設定項目は**classアトリビュート**によって区別されます。"
+"hrpsys-simulatorには現在以下の種類の設定項目があります::"
+
+#: ../../basics/project.rst:52
+msgid "com.generalrobotix.ui.item.GrxRTSItem"
+msgstr ""
+
+#: ../../basics/project.rst:52
+msgid "Defines initialization and connection of RT-components."
+msgstr "RTコンポーネントの初期化と接続を設定する"
+
+#: ../../basics/project.rst:55
+msgid "com.generalrobotix.ui.item.GrxModelItem"
+msgstr ""
+
+#: ../../basics/project.rst:55
+msgid "Defines robot model and initial attitudes."
+msgstr "ロボットモデルのロードと初期姿勢を設定する"
+
+#: ../../basics/project.rst:58
+msgid "com.generalrobotix.ui.item.GrxWorldStateItem"
+msgstr ""
+
+#: ../../basics/project.rst:58
+msgid "Defines physics simulation parameters."
+msgstr "物理シミュレーションのパラメータを設定する"
+
+#: ../../basics/project.rst:61
+msgid "com.generalrobotix.ui.item.GrxPythonScriptItem"
+msgstr ""
+
+#: ../../basics/project.rst:61
+msgid "Defines python script to be run behind the simulation."
+msgstr "シミュレーションの裏で動作するpythonスクリプトを設定する"
+
+#: ../../basics/project.rst:64
+msgid "com.generalrobotix.ui.view.Grx3DView"
+msgstr ""
+
+#: ../../basics/project.rst:64
+msgid "Defines initial view angle and visualization settings."
+msgstr "シミュレーション画面の初期のカメラ位置と視覚化を設定する"
+
+#: ../../basics/project.rst:66
+msgid ""
+"There are some other configuration item types such as com.generalrobotix.ui."
+"grxui.GrxUIPerspectiveFactory. These are the legacy item types used in "
+"previous eclipse based OpenHRP simulator. These items are kept for "
+"compatibility reason and has no effect to hrpsys-simulator."
+msgstr ""
+"com.generalrobotix.ui.grxui.GrxUIPerspectiveFactoryなど、その他の設定項目もあ"
+"りますが、それらはeclipseベースの旧OpenHRPシミュレータのための設定項目で互換"
+"性のために存在します。hrpsys-simulatorでは無視してください。"
+
+#: ../../basics/project.rst:69
+msgid "Change robot model"
+msgstr "ロボットモデルの変更"
+
+#: ../../basics/project.rst:71
+msgid ""
+"In this tutorial, we will use \"simple_vehicle_with_camera\" robot model "
+"which comes from OpenHRP samples."
+msgstr ""
+"このチュートリアルではOpenHRPサンプルに付属する\"simple_vehicle_with_camera"
+"\"ロボットモデルを使います。"
+
+#: ../../basics/project.rst:73
+msgid "We first, modify the model name and the url. Edit the following line:"
+msgstr "まずは、モデル名とURLを変更します。以下の部分を:"
+
+#: ../../basics/project.rst:80
+msgid "as follows:"
+msgstr "以下のように変更してください:"
+
+#: ../../basics/project.rst:88
+msgid ""
+"\"$(PROJECT_DIR)\" will be replaced with the place you have installed "
+"OpenHRP sample project (usually under /usr/local/share/OpenHRP-3.1/samples/"
+"project directory)."
+msgstr ""
+"\"$(PROJECT_DIR)\"はOpenHRPのサンプルプロジェクトディレクトリの位置で置き換え"
+"られます（多くの場合、 /usr/local/share/OpenHRP-3.1/samples/projectディレクト"
+"リです）。"
+
+#: ../../basics/project.rst:90
+msgid ""
+"Next, we configure each properties applied to the robot model. **rtcName** "
+"and **in[out]port** are the properties to create interface for the robot "
+"model as a RT-component. For **rtcName**, let's set the value to "
+"\"vehicle0\". For **in[out]port**, just copy the property from the original "
+"is fine (these properties mean we can get full position, velocity, "
+"acceleration based control interface to the robot)."
+msgstr ""
+"次に、ロボットモデルの各プロパティを設定していきます。 **rtcName**と"
+"**in[out]port**プロパティは、ロボットモデルにRTコンポーネントとしてのインター"
+"フェースを作成するための設定です。 ここでは**rtcName**を\"vehicle0\"と設定し"
+"ましょう。**in[out]port**プロパティは、元のファイルのままにしておいてください"
+"（この設定は、関節角、角速度、角加速度の各制御をロボットモデルに加えることが"
+"できる設定です）。"
+
+#: ../../basics/project.rst:92
+msgid ""
+"Specifically for this model, we can also use virtual camera. The final "
+"outport definition in below example is for the virtual camera. "
+"\"VISION_SENSOR1\" is the name for the virtual camera, which should be "
+"correspond to the name defined in the model file. The last \"VISION_SENSOR\" "
+"part specifies the data type."
+msgstr ""
+"このモデルについては仮想カメラを用いることができます。以下の例のoutport設定の"
+"最後の行は仮想カメラに関するものです。\"VISION_SENSOR1\"は仮想カメラの名前で"
+"モデルファイルの中で定義された名前と一致する必要があります。最後の"
+"\"VISION_SENSOR\"の部分はデータ型を定義します。"
+
+#: ../../basics/project.rst:94
+msgid ""
+"The final \"BODY.translation\" part specifies the position of the robot "
+"model in the simulation world."
+msgstr ""
+"最後の\"BODY.translation\"の行は、ロボットのシミュレーション世界での初期位置"
+"を設定します。"
+
+#: ../../basics/project.rst:110
+msgid ""
+"Now, we have finished creating our own simulation project. Let's open the "
+"project in hrpsys-simulator::"
+msgstr ""
+"シミュレーションプロジェクトの作成が終わったので、hrpsys-simulatorでプロジェ"
+"クトを開いてみましょう::"
+
+#: ../../basics/project.rst:114
+msgid ""
+"Can you see the robot in the world? You have probably seen empty world! In "
+"fact, we had to create a floor to support our vehicle to stay within our "
+"sight."
+msgstr ""
+"シミュレーション世界にロボットは現れたでしょうか？空の世界が見えたかもしれま"
+"せん。実は、床も設定しないと車は落下して視野からあっという間に消えてしまうの"
+"です。"
+
+#: ../../basics/project.rst:116
+msgid "Please add following lines to the project file:"
+msgstr "以下の行をプロジェクトファイルに追加してください:"
+
+#: ../../basics/project.rst:140
+msgid "Now, let's open the project in hrpsys-simulator::"
+msgstr "hrpsys-simulatorでプロジェクトを開いてみましょう::"
+
+#: ../../basics/project.rst:144
+msgid ""
+"In the next tutorial, we will learn how to connect the robot to our own "
+"controller."
+msgstr ""
+"次のチュートリアルでは、オリジナルのコントローラにロボットを接続する方法を学"
+"習します。"
+
+#: ../../basics/run.rst:3
+msgid "Run your first simulation"
+msgstr "最初のシミュレーションの実行"
+
+#: ../../basics/run.rst:6
+msgid "hrpsys-simulator command"
+msgstr "hrpsys-simulatorコマンド"
+
+#: ../../basics/run.rst:8
+msgid ""
+"The hrpsys-simulator command loads and runs a simulation. It is called like "
+"follows::"
+msgstr ""
+"hrpsys-simulatorコマンドはシミュレーションをロードし実行します。以下のように"
+"使います::"
+
+#: ../../basics/run.rst:12
+msgid ""
+"Where **project file** is the xml file which defines simulation world "
+"(explained later)."
+msgstr ""
+"**プロジェクトファイル**はシミュレーション世界を定義するXML形式のファイルです"
+"（あとで説明します）。"
+
+#: ../../basics/run.rst:14
+msgid "The hrpsys-simulator command has following options:"
+msgstr "hrpsys-simulatorコマンドには以下のオプションがあります:"
+
+#: ../../basics/run.rst:20
+msgid "Headless mode."
+msgstr "ヘッドレスモード"
+
+#: ../../basics/run.rst:24
+msgid "Synchronize to real world time."
+msgstr "実時間への同期"
+
+#: ../../basics/run.rst:28
+msgid "Use bounding box for collision detection."
+msgstr "干渉チェックに外接四角形を使う"
+
+#: ../../basics/run.rst:32
+msgid "Endless mode."
+msgstr "エンドレスモード"
+
+#: ../../basics/run.rst:36
+msgid "Visualize sensors."
+msgstr "画面上でセンサを視覚化する"
+
+#: ../../basics/run.rst:40
+msgid "Specify window size in pixels."
+msgstr "ウィンドウの大きさを設定する"
+
+#: ../../basics/run.rst:44
+msgid "Disable ambient light (simulation environment will be dark)."
+msgstr "環境光を無効にする"
+
+#: ../../basics/run.rst:48
+msgid ""
+"Specify maximum length of polygon edge (if exceed, polygon will be divided "
+"to improve rendering quality)."
+msgstr ""
+"ボリゴンの最大長を設定する（この最大長より大きなポリゴンは自動で分割され陰影"
+"などの表示品質を改善することができます）"
+
+#: ../../basics/run.rst:52
+msgid "Specify maximum size of the log."
+msgstr "ログの最大長を設定する"
+
+#: ../../basics/run.rst:56
+msgid "Exit the program when the simulation finish."
+msgstr "シミュレーションが終了したらプログラムを終了する"
+
+#: ../../basics/run.rst:60
+msgid "Record the simulation as movie."
+msgstr "シミュレーションを動画で保存する"
+
+#: ../../basics/run.rst:64
+msgid "Specify background color."
+msgstr "背景色を設定する"
+
+#: ../../basics/run.rst:68
+msgid "Show help message."
+msgstr "ヘルプを表示する"
+
+#: ../../basics/run.rst:71
+msgid "Running the example project"
+msgstr "サンプルプロジェクトを起動する"
+
+#: ../../basics/run.rst:73
+msgid ""
+"Before you run your simulation, openhrp-model-loader need to be running. "
+"Enter following command to run the model loader::"
+msgstr ""
+"シミュレータを実行する前にopenhrp-model-loaderが実行されている必要がありま"
+"す。以下のコマンドでモデルローダを実行してください::"
+
+#: ../../basics/run.rst:78
+msgid "Enter following command to start PA10 simulation::"
+msgstr "以下のコマンドを入力してPA10シミュレーションを実行してください::"
+
+#: ../../basics/run.rst:83
+msgid "Interact with the simulation window"
+msgstr "シミュレーション画面の操作"
+
+#: ../../basics/run.rst:85
+msgid "You can rotate the simulation world by **right click and drag**."
+msgstr ""
+"**右クリックとドラッグ**でシミュレーション世界を回転させることができます。"
+
+#: ../../basics/run.rst:87
+msgid "To translate the simulation world **left click and drag**."
+msgstr "**左クリックとドラッグ**でシミュレーション世界を平行移動できます。"
+
+#: ../../basics/run.rst:89
+msgid "You can also use **mouse wheel** to zoom in and zoom out."
+msgstr "**マウスホイール**でズームイン・ズームアウトできます。"
+
+#: ../../basics/run.rst:91
+msgid ""
+"There is also some command to control the simulation, **click the simulation "
+"window and type \"h\" key** to see all the commands."
+msgstr ""
+"**シミュレーションウィンドウで\"h\"キーを押す**ことでその他のコマンドを確認し"
+"てください。"
+
+#: ../../basics/run.rst:93
+msgid ""
+"**Click the simulation window and type \"q\" key** to quit the simulation."
+msgstr ""
+"**シミュレーションウィンドウで\"q\"キーを押す**ことでシミュレーションを終了し"
+"ます。"

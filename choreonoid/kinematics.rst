@@ -10,16 +10,27 @@ Loading the robot model
 
 Select "File" -> "Open..." -> "OpenHRP Model File" menu item.
 
+.. image:: open-model-file.png
+
 Select and open "(source folder)/share/model/PA10.wrl" file.
 
-Select "PA10" item from the items panel and the robot will be appeared in the scene panel.
+.. image:: open-pa10.png
+
+Select and check "PA10" item from the items panel and the robot will be appeared in the scene panel.
+
+.. image:: check-pa10.png
+
 
 Control the robot by forward kinematics
 =======================================
 
 First, press the "Forward Kinematics Mode" button.
 
+.. image:: click-fk.png
+
 Also, press "Enable link orientation editing" button. This will enable you to control the joint of the robot directly under the scene panel.
+
+.. image:: enable-editing.png
 
 You can control each joints of the robot by using the "Joint Sliders" panel or by clicking the joints and links of the robot directly on the "Scene" panel.
 
@@ -29,6 +40,10 @@ Control the robot by inverse kinematics
 
 To use inverse kinematics based control, press the "Inverse Kinematics Mode" button.
 
+.. image:: click-ik.png
+
 Also, press "Enable link orientation editing" button. This will enable you to control the joint of the robot directly under the scene panel.
+
+.. image:: enable-editing.png
 
 You can control the robot by clicking the joints and links of the robot directly on the "Scene" panel.

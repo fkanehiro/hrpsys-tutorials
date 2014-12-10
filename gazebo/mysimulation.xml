@@ -7,26 +7,17 @@
       <property name="CameraImageViewer0.factory" value="CameraImageViewer"/>
       <property name="svcontrol0.period" value="0.5"/>
       <property name="svcontrol0.factory" value="svcontrol"/>
-      <property name="connection" value="svcontrol0.q:vehicle0.dqRef"/>
+      <property name="connection" value="svcontrol0.q:vehicle0.ddqRef"/>
       <property name="connection" value="vehicle0.VISION_SENSOR1:CameraImageViewer0.imageIn"/>
     </item>
-    <item class="com.generalrobotix.ui.item.GrxModelItem" name="vehicle0" select="true" url="$(CURRENT_DIR)/simple_vehicle_with_color_camera.wrl">
+    <item class="com.generalrobotix.ui.item.GrxModelItem" name="simple_vehicle_with_camera" select="true" url="model://simple_vehicle_with_camera">
       <property name="isRobot" value="true"/>
       <property name="rtcName" value="vehicle0"/>
       <property name="inport" value="qRef:JOINT_VALUE"/>
       <property name="inport" value="dqRef:JOINT_VELOCITY"/>
       <property name="inport" value="ddqRef:JOINT_ACCELERATION"/>
       <property name="outport" value="q:JOINT_VALUE"/>
-      <property name="outport" value="VISION_SENSOR1:VISION_SENSOR1:VISION_SENSOR"/>
-      <property name="BODY.translation" value="0.0 0.0 0.2"/>
-    </item>
-    <item class="com.generalrobotix.ui.item.GrxModelItem" name="longfloor" select="true" url="$(PROJECT_DIR)/../model/longfloor.wrl">
-      <property name="isRobot" value="false"/>
-      <property name="WAIST.translation" value="0.0 0.0 -0.1 "/>
-    </item>
-    <item class="com.generalrobotix.ui.item.GrxCollisionPairItem" name="CP#floor#vehicle0" select="true">
-      <property name="objectName2" value="vehicle0"/>
-      <property name="objectName1" value="longfloor"/>
+      <property name="outport" value="VISION_SENSOR1:/simple_vehicle_with_camera/VISION_SENSOR1/left/image_raw:VISION_SENSOR"/>
     </item>
     <item class="com.generalrobotix.ui.item.GrxWorldStateItem" name="newworldstate0" select="true">
       <property name="logTimeStep" value="0.0010 "/>

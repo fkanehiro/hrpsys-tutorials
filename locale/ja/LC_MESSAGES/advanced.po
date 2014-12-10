@@ -1,0 +1,103 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: hrpsys tutorials 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-11 02:11+0900\n"
+"PO-Revision-Date: 2014-12-11 05:04+0900\n"
+"Last-Translator: Yosuke Matsusaka <yosuke.matsusaka@gmail.com>\n"
+"Language-Team:  <yosuke.matsusaka@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: ja\n"
+
+#: ../../advanced/index.rst:3
+msgid "Advanced Topics"
+msgstr "応用編"
+
+#: ../../advanced/index.rst:5
+msgid "Contents:"
+msgstr "目次:"
+
+#: ../../advanced/offline.rst:3
+msgid "Offline simulation"
+msgstr "オフラインシミュレーション"
+
+#: ../../advanced/scripting.rst:3
+msgid "Python scripting"
+msgstr "Pythonによるスクリプト作成"
+
+#: ../../advanced/scripting.rst:5
+msgid ""
+"In the previous tutorials, we have defined our simulation project in xml. "
+"But, you can use python script to configure the simulation as well."
+msgstr ""
+"前のチュートリアルでは、シミュレーションプロジェクトをXML形式で記述しました"
+"が、Pythonスクリプトを使ってシミュレーションを設定することもできます。"
+
+#: ../../advanced/scripting.rst:7
+msgid "Below is the example script:"
+msgstr "以下はスクリプトの例です:"
+
+#: ../../advanced/scripting.rst:27 ../../advanced/scripting.rst:66
+msgid "This script will:"
+msgstr "このスクリプトは:"
+
+#: ../../advanced/scripting.rst:29 ../../advanced/scripting.rst:68
+msgid "Import hrpsys library (line 1)"
+msgstr "hrpsysライブラリをインポート（１行目）"
+
+#: ../../advanced/scripting.rst:30
+msgid ""
+"Invoke pkg-config command as a child process to get OpenHRP sample folder "
+"(line 4-5)"
+msgstr ""
+"pkg-configコマンドを子プロセスとして起動しOpenHRPサンプルフォルダを取得（4-5"
+"行目）"
+
+#: ../../advanced/scripting.rst:31
+msgid "Load the simulator (line 7-8)"
+msgstr "シミュレータのロード（7-8行目）"
+
+#: ../../advanced/scripting.rst:32
+msgid "Load two box models and set its locations (line 9-11)"
+msgstr "２つの箱を作成し、位置を設定する（9-11行目）"
+
+#: ../../advanced/scripting.rst:33
+msgid "Set collision between the boxes (line 12)"
+msgstr "箱の間の干渉チェックを設定する（12行目）"
+
+#: ../../advanced/scripting.rst:34
+msgid ""
+"Initialize and run the simulation for one second time period (line 13-14)"
+msgstr "シミュレーションを１秒間実行する（13-14行目）"
+
+#: ../../advanced/scripting.rst:36
+msgid ""
+"You can also construct whole the simulation world only by python script:"
+msgstr ""
+"Pythonスクリプトのみでシミュレーション世界全体を記述することもできます:"
+
+#: ../../advanced/scripting.rst:69
+msgid "Load the simulator (line 3-4)"
+msgstr "シミュレータをロードする（3-4行目）"
+
+#: ../../advanced/scripting.rst:70
+msgid ""
+"Create the body model by using cube primitive and color it as red (line 6-10)"
+msgstr "プリミティブを使って赤色で箱型のモデルを作成する（6-10行目）"
+
+#: ../../advanced/scripting.rst:71
+msgid "Create rotation joint and set each physical properties (line 12-18)"
+msgstr "関節を作成し各物理パラメータを設定する（12-18行目）"
+
+#: ../../advanced/scripting.rst:72
+msgid "Create second cube connected to the joint (line 19-21)"
+msgstr "２つ目の箱を作成し関節で接続する（19-21行目）"
+
+#: ../../advanced/scripting.rst:73
+msgid ""
+"Initialize and run the simulation for three seconds time period (line 23-24)"
+msgstr "シミュレーションを初期化し３秒間実行する（23-24行目）"
