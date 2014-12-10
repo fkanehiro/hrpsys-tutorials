@@ -4,14 +4,14 @@ msgstr ""
 "Project-Id-Version: hrpsys tutorials 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-11 02:11+0900\n"
-"PO-Revision-Date: 2014-12-11 05:04+0900\n"
+"PO-Revision-Date: 2014-12-11 06:53+0900\n"
 "Last-Translator: Yosuke Matsusaka <yosuke.matsusaka@gmail.com>\n"
 "Language-Team:  <yosuke.matsusaka@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
 "Language: ja\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: ../../choreonoid/index.rst:3
 msgid "Use with Choreonoid"
@@ -118,23 +118,9 @@ msgstr ""
 msgid "Creating motion sequence"
 msgstr "モーションの作成"
 
-#: ../../choreonoid/motion.rst:5
-msgid ""
-"This tutorial explains how to configure and apply motion sequence creation "
-"in choreonoid."
-msgstr "このチュートリアルでは、Choreonoidを使ってモーション"
-
-#: ../../choreonoid/motion.rst:8 ../../choreonoid/physics.rst:8
+#: ../../choreonoid/connect.rst:8 ../../choreonoid/physics.rst:8
 msgid "Configuration"
 msgstr "設定"
-
-#: ../../choreonoid/motion.rst:10
-msgid "Create pose roll item."
-msgstr "ポーズロールアイテムを作成します。"
-
-#: ../../choreonoid/motion.rst:12 ../../choreonoid/physics.rst:12
-msgid "Open robot model."
-msgstr "ロボットモデルを開きます。"
 
 #: ../../choreonoid/physics.rst:3
 msgid "Physics simulation"
@@ -148,6 +134,172 @@ msgstr ""
 "このチュートリアルでは、Choreonoidを使って物理シミュレーションを行う方法を説"
 "明します。"
 
+#: ../../choreonoid/connect.rst:3
+msgid "Connect"
+msgstr "接続による拡張"
+
+#: ../../choreonoid/connect.rst:5
+msgid "This tutorial explains how to connect to external system in Choreonoid."
+msgstr ""
+"このチュートリアルではChoreonoidを外部のシステムに接続する方法を学習します。"
+
+#: ../../choreonoid/connect.rst:10 ../../choreonoid/motion.rst:17
 #: ../../choreonoid/physics.rst:10
-msgid "Create Physics simulation item."
-msgstr "物理シミュレーションアイテムを作成します。"
+msgid "From main menu:"
+msgstr "メインメニューでの操作:"
+
+#: ../../choreonoid/connect.rst:12 ../../choreonoid/motion.rst:19
+#: ../../choreonoid/physics.rst:12
+msgid "Create World item (select \"File\" -> \"New...\" -> \"World\")."
+msgstr "Worldアイテムを作成（ \"File\" -> \"New...\" -> \"World\"を選択）。"
+
+#: ../../choreonoid/connect.rst:13 ../../choreonoid/connect.rst:15
+#: ../../choreonoid/motion.rst:26 ../../choreonoid/physics.rst:13
+msgid ""
+"Create AISTSimulator item (select \"File\" -> \"New...\" -> \"AISTSimulator"
+"\")."
+msgstr ""
+"AISTSimulatorアイテムを作成（\"File\" -> \"New...\" -> \"AISTSimulator\"を選"
+"択）。"
+
+#: ../../choreonoid/connect.rst:14 ../../choreonoid/motion.rst:20
+#: ../../choreonoid/physics.rst:14
+msgid ""
+"Load model item (select \"File\" -> \"Open...\" -> \"OpenHRP Model File\")."
+msgstr ""
+"Modelアイテムのロード（\"File\" -> \"Open...\" -> \"OpenHRP Model File\"を選"
+"択）。"
+
+#: ../../choreonoid/connect.rst:17 ../../choreonoid/motion.rst:28
+#: ../../choreonoid/physics.rst:16
+msgid "In item panel:"
+msgstr "Itemパネルでの操作:"
+
+#: ../../choreonoid/connect.rst:19 ../../choreonoid/physics.rst:18
+msgid ""
+"Drag and drop the items to following order (model and simulator item must "
+"belong to the world item)."
+msgstr ""
+"アイテムをドラッグアンドドロップして以下のように並べます（modelアイテムと"
+"simulatorアイテムはworldアイテムの下になければなりません）。"
+
+#: ../../choreonoid/connect.rst:25 ../../choreonoid/physics.rst:24
+msgid "Set initial pose"
+msgstr "初期姿勢の設定"
+
+#: ../../choreonoid/connect.rst:27 ../../choreonoid/physics.rst:26
+msgid "Change the robot to initial pose (see :doc:`kinematics`)."
+msgstr "ロボットを初期姿勢に変更します（ :doc:`kinematics` 参照）。"
+
+#: ../../choreonoid/connect.rst:29 ../../choreonoid/physics.rst:28
+msgid "Click \"store initial state\" button."
+msgstr "現在の状態をワールド初期状態に設定"
+
+#: ../../choreonoid/connect.rst:35 ../../choreonoid/physics.rst:34
+msgid "Run the simulation"
+msgstr "シミュレーションを実行"
+
+#: ../../choreonoid/connect.rst:37 ../../choreonoid/physics.rst:36
+msgid "Click \"start simulation\" button."
+msgstr "\"start simulation\"ボタンをクリック"
+
+#: ../../choreonoid/motion.rst:5
+msgid ""
+"This tutorial explains how to configure and apply motion sequence editing "
+"function in Choreonoid."
+msgstr ""
+"このチュートリアルではChoreonoidを使ってモーション列を編集する方法について学"
+"びます。"
+
+#: ../../choreonoid/motion.rst:8
+msgid "Load sample project"
+msgstr "サンプルプロジェクトのロード"
+
+#: ../../choreonoid/motion.rst:10
+msgid ""
+"Select \"File\" -> \"Open Project\" menu item and open \"GR001Sample\" under "
+"\"share/project\" folder."
+msgstr ""
+"メニューから\"File\" -> \"Open Project\" を選択し、\"share/project\"フォルダ"
+"の下の \"GR001Sample\"を開きます。"
+
+#: ../../choreonoid/motion.rst:13
+msgid "Configuration for your own project"
+msgstr "独自のプロジェクト用の設定"
+
+#: ../../choreonoid/motion.rst:15
+msgid ""
+"If you want to edit motion sequence of your own robot model, apply following "
+"configuration."
+msgstr ""
+"自分のロボットのためのモーションを編集したい場合、以下の設定を行ってくださ"
+"い。"
+
+#: ../../choreonoid/motion.rst:21
+msgid "Create PoseSeq item (select \"File\" -> \"New...\" -> \"PoseSeq\")."
+msgstr "PoseSeqアイテムの作成（ \"File\" -> \"New...\" -> \"PoseSeq\"を選択）"
+
+#: ../../choreonoid/motion.rst:23
+msgid ""
+"If you require physics simulation during the motion editing, add following "
+"additional items:"
+msgstr ""
+"モーション編集中に物理シミュレーションも行いたい場合は以下のアイテムも追加し"
+"ます:"
+
+#: ../../choreonoid/motion.rst:25
+msgid ""
+"Load floor model item (select \"File\" -> \"Open...\" -> \"OpenHRP Model File"
+"\")."
+msgstr ""
+"floorモデルのロード（\"File\" -> \"Open...\" -> \"OpenHRP Model File\"を選"
+"択）"
+
+#: ../../choreonoid/motion.rst:30
+msgid ""
+"Drag and drop the items to following order (model and simulator item must "
+"belong to the world item and poseseq item must belong to model item)."
+msgstr ""
+"アイテムをドラッグアンドドロップして以下の順番で並べます（modelアイテムと"
+"simulatorアイテムはworldアイテムの下、poseseqアイテムはmodelアイテムの下）。"
+
+#: ../../choreonoid/motion.rst:35
+msgid "Basic motion sequence editing process"
+msgstr "モーション編集の基本操作"
+
+#: ../../choreonoid/motion.rst:37
+msgid ""
+"Open pose roll view by selecting \"View\" -> \"Show View\" -> \"Pose Roll\" "
+"menu item."
+msgstr ""
+" メニューから\"View\" -> \"Show View\" -> \"Pose Roll\"を選択してpose roll"
+"ビューを開きます。"
+
+#: ../../choreonoid/motion.rst:39
+msgid "Click and check PosSeq item."
+msgstr "PoseSeqアイテムをクリックして選択しチェックボックスをオンにします。"
+
+#: ../../choreonoid/motion.rst:41
+msgid "Click \"Play Animation\" button to play the motion."
+msgstr " \"Play Animation\"ボタンを押してモーションを再生します。"
+
+#: ../../choreonoid/motion.rst:43
+msgid ""
+"Click \"Insert\" button on the pose roll panel to insert new key frames."
+msgstr ""
+"Pose rollパネルの\"Insert\"ボタンをクリックして、新しいキーフレームを挿入しま"
+"す。"
+
+#~ msgid ""
+#~ "This tutorial explains how to configure and apply motion sequence "
+#~ "creation in choreonoid."
+#~ msgstr "このチュートリアルでは、Choreonoidを使ってモーション"
+
+#~ msgid "Create pose roll item."
+#~ msgstr "ポーズロールアイテムを作成します。"
+
+#~ msgid "Open robot model."
+#~ msgstr "ロボットモデルを開きます。"
+
+#~ msgid "Create Physics simulation item."
+#~ msgstr "物理シミュレーションアイテムを作成します。"
