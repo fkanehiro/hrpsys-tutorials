@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: hrpsys tutorials 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-11 02:11+0900\n"
-"PO-Revision-Date: 2014-12-11 06:53+0900\n"
+"PO-Revision-Date: 2014-12-11 09:59+0900\n"
 "Last-Translator: Yosuke Matsusaka <yosuke.matsusaka@gmail.com>\n"
 "Language-Team:  <yosuke.matsusaka@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -76,7 +76,7 @@ msgstr "順運動学を使ったロボットの操作"
 msgid "First, press the \"Forward Kinematics Mode\" button."
 msgstr " \"Forward Kinematics Mode\"ボタンをクリックします。"
 
-#: ../../choreonoid/kinematics.rst:31 ../../choreonoid/kinematics.rst:45
+#: ../../choreonoid/kinematics.rst:31 ../../choreonoid/kinematics.rst:48
 msgid ""
 "Also, press \"Enable link orientation editing\" button. This will enable you "
 "to control the joint of the robot directly under the scene panel."
@@ -85,7 +85,7 @@ msgstr ""
 "クすることで、シーンパネル上でのクリック操作でロボットの操作ができるようにな"
 "ります。"
 
-#: ../../choreonoid/kinematics.rst:35
+#: ../../choreonoid/kinematics.rst:37
 msgid ""
 "You can control each joints of the robot by using the \"Joint Sliders\" "
 "panel or by clicking the joints and links of the robot directly on the "
@@ -94,11 +94,11 @@ msgstr ""
 "\"Joint Sliders\"パネルかシーンパネル上のロボットを直接クリックすることでロ"
 "ボットの各関節が操作できます。"
 
-#: ../../choreonoid/kinematics.rst:39
+#: ../../choreonoid/kinematics.rst:42
 msgid "Control the robot by inverse kinematics"
 msgstr "逆運動学を使ったロボットの操作"
 
-#: ../../choreonoid/kinematics.rst:41
+#: ../../choreonoid/kinematics.rst:44
 msgid ""
 "To use inverse kinematics based control, press the \"Inverse Kinematics Mode"
 "\" button."
@@ -106,7 +106,7 @@ msgstr ""
 "逆運動学を使ってロボットを操作するには、\"Inverse Kinematics Mode\"ボタンをク"
 "リックしてください。"
 
-#: ../../choreonoid/kinematics.rst:49
+#: ../../choreonoid/kinematics.rst:54
 msgid ""
 "You can control the robot by clicking the joints and links of the robot "
 "directly on the \"Scene\" panel."
@@ -118,7 +118,7 @@ msgstr ""
 msgid "Creating motion sequence"
 msgstr "モーションの作成"
 
-#: ../../choreonoid/connect.rst:8 ../../choreonoid/physics.rst:8
+#: ../../choreonoid/physics.rst:8
 msgid "Configuration"
 msgstr "設定"
 
@@ -143,18 +143,18 @@ msgid "This tutorial explains how to connect to external system in Choreonoid."
 msgstr ""
 "このチュートリアルではChoreonoidを外部のシステムに接続する方法を学習します。"
 
-#: ../../choreonoid/connect.rst:10 ../../choreonoid/motion.rst:17
+#: ../../choreonoid/connect.rst:17 ../../choreonoid/motion.rst:17
 #: ../../choreonoid/physics.rst:10
 msgid "From main menu:"
 msgstr "メインメニューでの操作:"
 
-#: ../../choreonoid/connect.rst:12 ../../choreonoid/motion.rst:19
+#: ../../choreonoid/connect.rst:19 ../../choreonoid/motion.rst:19
 #: ../../choreonoid/physics.rst:12
 msgid "Create World item (select \"File\" -> \"New...\" -> \"World\")."
 msgstr "Worldアイテムを作成（ \"File\" -> \"New...\" -> \"World\"を選択）。"
 
-#: ../../choreonoid/connect.rst:13 ../../choreonoid/connect.rst:15
-#: ../../choreonoid/motion.rst:26 ../../choreonoid/physics.rst:13
+#: ../../choreonoid/connect.rst:26 ../../choreonoid/motion.rst:26
+#: ../../choreonoid/physics.rst:13
 msgid ""
 "Create AISTSimulator item (select \"File\" -> \"New...\" -> \"AISTSimulator"
 "\")."
@@ -162,7 +162,7 @@ msgstr ""
 "AISTSimulatorアイテムを作成（\"File\" -> \"New...\" -> \"AISTSimulator\"を選"
 "択）。"
 
-#: ../../choreonoid/connect.rst:14 ../../choreonoid/motion.rst:20
+#: ../../choreonoid/connect.rst:20 ../../choreonoid/motion.rst:20
 #: ../../choreonoid/physics.rst:14
 msgid ""
 "Load model item (select \"File\" -> \"Open...\" -> \"OpenHRP Model File\")."
@@ -170,12 +170,12 @@ msgstr ""
 "Modelアイテムのロード（\"File\" -> \"Open...\" -> \"OpenHRP Model File\"を選"
 "択）。"
 
-#: ../../choreonoid/connect.rst:17 ../../choreonoid/motion.rst:28
+#: ../../choreonoid/connect.rst:28 ../../choreonoid/motion.rst:28
 #: ../../choreonoid/physics.rst:16
 msgid "In item panel:"
 msgstr "Itemパネルでの操作:"
 
-#: ../../choreonoid/connect.rst:19 ../../choreonoid/physics.rst:18
+#: ../../choreonoid/physics.rst:18
 msgid ""
 "Drag and drop the items to following order (model and simulator item must "
 "belong to the world item)."
@@ -183,23 +183,23 @@ msgstr ""
 "アイテムをドラッグアンドドロップして以下のように並べます（modelアイテムと"
 "simulatorアイテムはworldアイテムの下になければなりません）。"
 
-#: ../../choreonoid/connect.rst:25 ../../choreonoid/physics.rst:24
+#: ../../choreonoid/physics.rst:24
 msgid "Set initial pose"
 msgstr "初期姿勢の設定"
 
-#: ../../choreonoid/connect.rst:27 ../../choreonoid/physics.rst:26
+#: ../../choreonoid/physics.rst:26
 msgid "Change the robot to initial pose (see :doc:`kinematics`)."
 msgstr "ロボットを初期姿勢に変更します（ :doc:`kinematics` 参照）。"
 
-#: ../../choreonoid/connect.rst:29 ../../choreonoid/physics.rst:28
+#: ../../choreonoid/physics.rst:28
 msgid "Click \"store initial state\" button."
 msgstr "現在の状態をワールド初期状態に設定"
 
-#: ../../choreonoid/connect.rst:35 ../../choreonoid/physics.rst:34
+#: ../../choreonoid/connect.rst:59 ../../choreonoid/physics.rst:34
 msgid "Run the simulation"
 msgstr "シミュレーションを実行"
 
-#: ../../choreonoid/connect.rst:37 ../../choreonoid/physics.rst:36
+#: ../../choreonoid/connect.rst:61 ../../choreonoid/physics.rst:36
 msgid "Click \"start simulation\" button."
 msgstr "\"start simulation\"ボタンをクリック"
 
@@ -211,23 +211,15 @@ msgstr ""
 "このチュートリアルではChoreonoidを使ってモーション列を編集する方法について学"
 "びます。"
 
-#: ../../choreonoid/motion.rst:8
+#: ../../choreonoid/connect.rst:8 ../../choreonoid/motion.rst:8
 msgid "Load sample project"
 msgstr "サンプルプロジェクトのロード"
 
-#: ../../choreonoid/motion.rst:10
-msgid ""
-"Select \"File\" -> \"Open Project\" menu item and open \"GR001Sample\" under "
-"\"share/project\" folder."
-msgstr ""
-"メニューから\"File\" -> \"Open Project\" を選択し、\"share/project\"フォルダ"
-"の下の \"GR001Sample\"を開きます。"
-
-#: ../../choreonoid/motion.rst:13
+#: ../../choreonoid/connect.rst:13 ../../choreonoid/motion.rst:13
 msgid "Configuration for your own project"
 msgstr "独自のプロジェクト用の設定"
 
-#: ../../choreonoid/motion.rst:15
+#: ../../choreonoid/connect.rst:15 ../../choreonoid/motion.rst:15
 msgid ""
 "If you want to edit motion sequence of your own robot model, apply following "
 "configuration."
@@ -247,7 +239,7 @@ msgstr ""
 "モーション編集中に物理シミュレーションも行いたい場合は以下のアイテムも追加し"
 "ます:"
 
-#: ../../choreonoid/motion.rst:25
+#: ../../choreonoid/connect.rst:25 ../../choreonoid/motion.rst:25
 msgid ""
 "Load floor model item (select \"File\" -> \"Open...\" -> \"OpenHRP Model File"
 "\")."
@@ -289,6 +281,79 @@ msgid ""
 msgstr ""
 "Pose rollパネルの\"Insert\"ボタンをクリックして、新しいキーフレームを挿入しま"
 "す。"
+
+#: ../../choreonoid/kinematics.rst:35 ../../choreonoid/kinematics.rst:52
+msgid "Right click on the scene panel and click \"Edit mode\"."
+msgstr "Sceneパネルを右クリックし \"Edit mode\"を選択します。"
+
+#: ../../choreonoid/connect.rst:10
+msgid ""
+"Select \"File\" -> \"Open Project\" menu item and open \"OpenRTM-PA10Pickup."
+"cnoid\" under \"share/project\" folder."
+msgstr ""
+"メニューから\"File\" -> \"Open Project\"を選択し、\"share/project\"フォルダの"
+"\"OpenRTM-PA10Pickup.cnoid\"を開きます。"
+
+#: ../../choreonoid/connect.rst:21
+msgid "Create BodyRTC item (select \"File\" -> \"New...\" -> \"BodyRTC\")."
+msgstr "BodyRTCアイテムを作成（\"File\" -> \"New...\" -> \"BodyRTC\"を選択）"
+
+#: ../../choreonoid/connect.rst:23
+msgid "If you require physics simulation, add following additional items:"
+msgstr ""
+"物理シミュレーションをする必要があれば以下のアイテムも追加してください:"
+
+#: ../../choreonoid/connect.rst:30
+msgid ""
+"Drag and drop the items to following order (model and simulator item must "
+"belong to the world item and BodyRTC item must belong to model item)."
+msgstr ""
+
+#: ../../choreonoid/connect.rst:34
+msgid "Click BodyRTC item in the item panel and edit the property as:"
+msgstr ""
+
+#: ../../choreonoid/connect.rst:36
+msgid "Controller module name: PA10PickupControllerRTC"
+msgstr ""
+
+#: ../../choreonoid/connect.rst:37
+msgid "Configuration mode: Use Configuration File"
+msgstr ""
+
+#: ../../choreonoid/connect.rst:38
+msgid "Configuration file name: PA10Pickup.conf"
+msgstr ""
+
+#: ../../choreonoid/connect.rst:42
+msgid ""
+"Create configuration file named \"PA10Pickup.conf\" with following content:"
+msgstr ""
+
+#: ../../choreonoid/connect.rst:54
+msgid ""
+"Above example create instance of PA10PickupControllerRTC and connect each "
+"ports to the robot model."
+msgstr ""
+
+#: ../../choreonoid/connect.rst:56
+msgid ""
+"You can also use the components comes from hrpsys-base or create the "
+"component of your own (see :doc:`../basics/connect`)."
+msgstr ""
+
+#: ../../choreonoid/motion.rst:10
+msgid ""
+"Select \"File\" -> \"Open Project\" menu item and open \"GR001Sample.cnoid\" "
+"under \"share/project\" folder."
+msgstr ""
+
+#~ msgid ""
+#~ "Select \"File\" -> \"Open Project\" menu item and open \"GR001Sample\" "
+#~ "under \"share/project\" folder."
+#~ msgstr ""
+#~ "メニューから\"File\" -> \"Open Project\" を選択し、\"share/project\"フォル"
+#~ "ダの下の \"GR001Sample\"を開きます。"
 
 #~ msgid ""
 #~ "This tutorial explains how to configure and apply motion sequence "

@@ -7,7 +7,7 @@ This tutorial explains how to configure and apply motion sequence editing functi
 Load sample project
 ===================
 
-Select "File" -> "Open Project" menu item and open "GR001Sample" under "share/project" folder.
+Select "File" -> "Open Project" menu item and open "GR001Sample.cnoid" under "share/project" folder.
 
 Configuration for your own project
 ==================================
