@@ -32,8 +32,11 @@ Also, press "Enable link orientation editing" button. This will enable you to co
 
 .. image:: enable-editing.png
 
+Right click on the scene panel and click "Edit mode".
+
 You can control each joints of the robot by using the "Joint Sliders" panel or by clicking the joints and links of the robot directly on the "Scene" panel.
 
+.. image:: edit-fk.png
 
 Control the robot by inverse kinematics
 =======================================
@@ -46,4 +49,8 @@ Also, press "Enable link orientation editing" button. This will enable you to co
 
 .. image:: enable-editing.png
 
+Right click on the scene panel and click "Edit mode".
+
 You can control the robot by clicking the joints and links of the robot directly on the "Scene" panel.
+
+.. image:: edit-ik.png
