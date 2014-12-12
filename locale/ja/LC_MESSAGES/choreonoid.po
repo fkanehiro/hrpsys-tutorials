@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: hrpsys tutorials 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-11 02:11+0900\n"
-"PO-Revision-Date: 2014-12-11 09:59+0900\n"
+"PO-Revision-Date: 2014-12-12 10:32+0900\n"
 "Last-Translator: Yosuke Matsusaka <yosuke.matsusaka@gmail.com>\n"
 "Language-Team:  <yosuke.matsusaka@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -308,10 +308,15 @@ msgid ""
 "Drag and drop the items to following order (model and simulator item must "
 "belong to the world item and BodyRTC item must belong to model item)."
 msgstr ""
+"アイテムをドラッグアンドドロップして以下の順番に並べます（modelアイテムと"
+"simulatorアイテムはworldアイテムの下に、BodyRTCアイテムはmodelアイテムの下"
+"に）。"
 
 #: ../../choreonoid/connect.rst:34
 msgid "Click BodyRTC item in the item panel and edit the property as:"
 msgstr ""
+"Itemパネル上でBodyRTCアイテムをクリックしてプロパティを以下のように変更しま"
+"す:"
 
 #: ../../choreonoid/connect.rst:36
 msgid "Controller module name: PA10PickupControllerRTC"
@@ -328,25 +333,31 @@ msgstr ""
 #: ../../choreonoid/connect.rst:42
 msgid ""
 "Create configuration file named \"PA10Pickup.conf\" with following content:"
-msgstr ""
+msgstr "以下の内容の\"PA10Pickup.conf\"という設定ファイルを作成します:"
 
 #: ../../choreonoid/connect.rst:54
 msgid ""
 "Above example create instance of PA10PickupControllerRTC and connect each "
 "ports to the robot model."
 msgstr ""
+"上記の例はPA10PickupControllerRTCのインスタンスを作成して各ポートをロボットに"
+"接続します。"
 
 #: ../../choreonoid/connect.rst:56
 msgid ""
 "You can also use the components comes from hrpsys-base or create the "
 "component of your own (see :doc:`../basics/connect`)."
 msgstr ""
+"hrpsys-baseに同封された各コンポーネントを使うことや独自のコンポーネントを実装"
+"することもできます（:doc:`../basics/connect`参照）。"
 
 #: ../../choreonoid/motion.rst:10
 msgid ""
 "Select \"File\" -> \"Open Project\" menu item and open \"GR001Sample.cnoid\" "
 "under \"share/project\" folder."
 msgstr ""
+"メニューから\"File\" -> \"Open Project\"を選択し、\"share/project\"フォルダの"
+"下の\"GR001Sample.cnoid\"を開いてください。"
 
 #~ msgid ""
 #~ "Select \"File\" -> \"Open Project\" menu item and open \"GR001Sample\" "
