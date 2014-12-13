@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: hrpsys tutorials 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-11 02:11+0900\n"
-"PO-Revision-Date: 2014-12-12 10:32+0900\n"
+"PO-Revision-Date: 2014-12-13 14:44+0900\n"
 "Last-Translator: Yosuke Matsusaka <yosuke.matsusaka@gmail.com>\n"
 "Language-Team:  <yosuke.matsusaka@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -24,14 +24,6 @@ msgstr "目次:"
 #: ../../choreonoid/install.rst:3
 msgid "Install"
 msgstr "インストール"
-
-#: ../../choreonoid/install.rst:6
-msgid "Using ppa"
-msgstr "PPAを使ったインストール（推奨）"
-
-#: ../../choreonoid/install.rst:10
-msgid "From source"
-msgstr "ソースコードからのインストール"
 
 #: ../../choreonoid/kinematics.rst:3
 msgid "Controlling robot with forward and inverse kinematics"
@@ -320,15 +312,15 @@ msgstr ""
 
 #: ../../choreonoid/connect.rst:36
 msgid "Controller module name: PA10PickupControllerRTC"
-msgstr ""
+msgstr "Controller module name: PA10PickupControllerRTC"
 
 #: ../../choreonoid/connect.rst:37
 msgid "Configuration mode: Use Configuration File"
-msgstr ""
+msgstr "Configuration mode: Use Configuration File"
 
 #: ../../choreonoid/connect.rst:38
 msgid "Configuration file name: PA10Pickup.conf"
-msgstr ""
+msgstr "Configuration file name: PA10Pickup.conf"
 
 #: ../../choreonoid/connect.rst:42
 msgid ""
@@ -358,6 +350,42 @@ msgid ""
 msgstr ""
 "メニューから\"File\" -> \"Open Project\"を選択し、\"share/project\"フォルダの"
 "下の\"GR001Sample.cnoid\"を開いてください。"
+
+#: ../../choreonoid/install.rst:6
+msgid "Install using ppa (recommended)"
+msgstr "PPAを使ったインストール（推奨）"
+
+#: ../../choreonoid/install.rst:15
+msgid "Install from source"
+msgstr "ソースコードからのインストール"
+
+#: ../../choreonoid/install.rst:19
+msgid ""
+"Source based installation is hard way. ppa based installation is highly "
+"recommended."
+msgstr ""
+"ソースコードからのインストールは様々なライブラリをインストールしなければなら"
+"ないため推奨されません。通常はppaによるインストールを行ってください。"
+
+#: ../../choreonoid/install.rst:22
+msgid "Clone most recent source from github."
+msgstr "githubから最新のソースをクローンします。"
+
+#: ../../choreonoid/install.rst:28
+msgid "Install depending libraries."
+msgstr "依存するライブラリをインストールします。"
+
+#: ../../choreonoid/install.rst:35
+msgid "Then, run cmake and make to configure, compile and install."
+msgstr ""
+"設定、コンパイル、インストールを行うためにcmakeコマンドとmakeコマンドを実行し"
+"ます。"
+
+#~ msgid "Using ppa"
+#~ msgstr "PPAを使ったインストール（推奨）"
+
+#~ msgid "From source"
+#~ msgstr "ソースコードからのインストール"
 
 #~ msgid ""
 #~ "Select \"File\" -> \"Open Project\" menu item and open \"GR001Sample\" "
