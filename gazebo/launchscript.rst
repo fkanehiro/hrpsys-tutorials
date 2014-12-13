@@ -23,7 +23,7 @@ Then modify the topic name defined in the previous project file from "image_raw"
             <property name="inport" value="dqRef:JOINT_VELOCITY"/>
             <property name="inport" value="ddqRef:JOINT_ACCELERATION"/>
             <property name="outport" value="q:JOINT_VALUE"/>
-            <property name="outport" value="VISION_SENSOR1:/simple_vehicle_with_camera/VISION_SENSOR1/left/image_rect_color:VISION_SENSOR"/>
+            <property name="outport" value="VISION_SENSOR1:/simple_vehicle_with_camera/VISION_SENSOR1/image_rect_color:VISION_SENSOR"/>
         </item>
         ..snip..
       </mode>

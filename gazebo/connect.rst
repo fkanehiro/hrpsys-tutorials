@@ -59,7 +59,7 @@ After the editor is opened, you will see following contents.
             <property name="inport" value="dqRef:JOINT_VELOCITY"/>
             <property name="inport" value="ddqRef:JOINT_ACCELERATION"/>
             <property name="outport" value="q:JOINT_VALUE"/>
-            <property name="outport" value="VISION_SENSOR1:/simple_vehicle_with_camera/VISION_SENSOR1/left/image_raw:VISION_SENSOR"/>
+            <property name="outport" value="VISION_SENSOR1:/simple_vehicle_with_camera/VISION_SENSOR1/image_raw:VISION_SENSOR"/>
         </item>
         ..snip..
       </mode>
