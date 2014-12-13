@@ -20,7 +20,7 @@ Install from source
    ppa based installation is highly recommended.
 
 To install from source, we first need to install depending hrpsys-base with libraries.
-Please refer to ::doc::`../basic/install` for details.
+Please refer to :doc:`../basics/install` for details.
 
 Clone most recent source from github.
 
