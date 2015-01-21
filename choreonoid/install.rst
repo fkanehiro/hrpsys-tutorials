@@ -7,7 +7,7 @@ Install using ppa (recommended)
 
 .. code-block:: bash
 
-   $ sudo add-apt-repository ppa:hrg/ppa
+   $ sudo add-apt-repository ppa:hrg/daily
    $ sudo apt-get update
    $ sudo apt-get install choreonoid
 
