@@ -154,7 +154,7 @@ Add following lines to myproject.xml  to instantiate and connect the **svcontrol
       <property name="svcontrol0.factory" value="svcontrol"/>
       <property name="svcontrol0.period" value="0.05"/>
       <property name="connection" value="vehicle0.VISION_SENSOR1:CameraImageViewer0.imageIn"/>
-      <property name="connection" value="svcontrol0.q:vehicle0.ddqRef"/>
+      <property name="connection" value="svcontrol0.q:vehicle0.dqRef"/>
    </item>
 
 As a result, following system will be generated from this configuration:

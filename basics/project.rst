@@ -117,6 +117,7 @@ Please add following lines to the project file:
 
 .. code-block:: xml
    :linenos:
+   :emphasize-lines: 11-18
 
    <item class="com.generalrobotix.ui.item.GrxModelItem" name="vehicle0" select="true" url="$(PROJECT_DIR)/../model/simple_vehicle_with_camera.wrl">
       <property name="isRobot" value="true"/>

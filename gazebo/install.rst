@@ -13,8 +13,6 @@ To install from source, we first need to install depending hrpsys-base with libr
    $ sudo apt-get update
    $ sudo apt-get install hrpsys-base libsdl1.2-dev
 
-Please refer to :doc:`../basics/install` for details.
-
 We also need to install gazebo.
 Please refer to following page for installation of gazebo itself:
 

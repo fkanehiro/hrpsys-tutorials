@@ -43,6 +43,10 @@ For project file, copy from hrpsys samples::
 
   $ cp `pkg-config --variable=prefix hrpsys-base`/share/hrpsys/samples/PA10/PA10simulation.xml mysimulation.xml
 
+Before running the simulation, open new terminal and run roscore service::
+
+  $ roscore
+
 Open the project and simulation world in hrpsys-gazebo-simulator::
 
   $ hrpsys-gazebo-simulator mysimulation.xml $HOME/.gazebo/models/pa10.world -endless
