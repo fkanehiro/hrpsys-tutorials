@@ -2,25 +2,27 @@
  Install
 =========
 
-Install using ppa (recommended)
-===============================
+Install from source
+===================
+
+To install from source, we first need to install depending hrpsys-base with libraries.
 
 .. code-block:: bash
 
    $ sudo add-apt-repository ppa:hrg/daily
    $ sudo apt-get update
-   $ sudo apt-get install hrpsys-base-gazebo
+   $ sudo apt-get install hrpsys-base libsdl1.2-dev
 
-Install from source
-===================
-
-.. warning::
-
-   Source based installation is hard way.
-   ppa based installation is highly recommended.
-
-To install from source, we first need to install depending hrpsys-base with libraries.
 Please refer to :doc:`../basics/install` for details.
+
+We also need to install gazebo.
+Please refer to following page for installation of gazebo itself:
+
+http://gazebosim.org/tutorials?tut=install_ubuntu&cat=installation
+
+Or refer to this page to install gazebo with DRC plugins and models:
+
+https://bitbucket.org/osrf/drcsim/wiki/DRC/Install
 
 Clone most recent source from github.
 

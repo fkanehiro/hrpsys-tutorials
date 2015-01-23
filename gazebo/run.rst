@@ -32,6 +32,22 @@ The hrpsys-gazebo-simulator command has following options:
 
    Show help message.
 
+Running sample project
+======================
+
+Run following command to convert the robot model and create simulation world::
+  
+  $ simtrans -i `pkg-config openhrp3.1 --variable=prefix`/share/OpenHRP-3.1/sample/model/PA10/pa10.main.wrl -o $HOME/.gazebo/models/pa10.world
+
+For project file, copy from hrpsys samples::
+
+  $ cp `pkg-config --variable=prefix hrpsys-base`/share/hrpsys/samples/PA10/PA10simulation.xml mysimulation.xml
+
+Open the project and simulation world in hrpsys-gazebo-simulator::
+
+  $ hrpsys-gazebo-simulator mysimulation.xml $HOME/.gazebo/models/pa10.world -endless
+
+
 Interact with the simulation window
 ===================================
 
