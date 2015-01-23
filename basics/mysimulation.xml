@@ -13,9 +13,8 @@
     <item class="com.generalrobotix.ui.item.GrxModelItem" name="vehicle0" select="true" url="$(CURRENT_DIR)/simple_vehicle_with_color_camera.wrl">
       <property name="isRobot" value="true"/>
       <property name="rtcName" value="vehicle0"/>
-      <property name="inport" value="qRef:JOINT_VALUE"/>
-      <property name="inport" value="dqRef:JOINT_VELOCITY"/>
-      <property name="inport" value="ddqRef:JOINT_ACCELERATION"/>
+      <property name="inport" value="qRef:STEERING:JOINT_VALUE"/>
+      <property name="inport" value="dqRef:FRONT_WHEEL:JOINT_VELOCITY"/>
       <property name="outport" value="q:JOINT_VALUE"/>
       <property name="outport" value="VISION_SENSOR1:VISION_SENSOR1:VISION_SENSOR"/>
       <property name="BODY.translation" value="0.0 0.0 0.2"/>

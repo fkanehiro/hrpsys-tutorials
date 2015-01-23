@@ -97,11 +97,8 @@ RTC::ReturnCode_t svcontrol::onDeactivated(RTC::UniqueId ec_id)
 */
 RTC::ReturnCode_t svcontrol::onExecute(RTC::UniqueId ec_id)
 {
-  m_q.data.length(4);
+  m_q.data.length(1);
   m_q.data[0] = 10.0;
-  m_q.data[1] = 10.0;
-  m_q.data[2] = 10.0;
-  m_q.data[3] = 10.0;
   m_qOut.write();
   return RTC::RTC_OK;
 }
