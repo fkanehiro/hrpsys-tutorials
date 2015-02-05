@@ -1,0 +1,232 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>モーションの作成 &mdash; hrpsys tutorials 0.0.1 ドキュメント</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="hrpsys tutorials 0.0.1 ドキュメント" href="../index.html"/>
+        <link rel="up" title="Choreonoidとの接続" href="index.html"/>
+        <link rel="next" title="物理シミュレーションの実行" href="physics.html"/>
+        <link rel="prev" title="順運動学と逆運動学を使ったロボットの操作" href="kinematics.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> hrpsys tutorials</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basics/index.html">基本的な使い方</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../basics/install.html">インストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/run.html">最初のシミュレーションの実行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/project.html">オリジナルのプロジェクトの作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/connect.html">接続による拡張</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">応用編</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../advanced/scripting.html">Pythonによるスクリプト作成</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gazebo/index.html">Gazeboとの接続</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gazebo/install.html">インストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gazebo/run.html">最初のシミュレーションの実行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gazebo/project.html">オリジナルのプロジェクトの作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gazebo/connect.html">接続による拡張</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gazebo/launchscript.html">rosスタックとの接続</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Choreonoidとの接続</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="install.html">インストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics.html">順運動学と逆運動学を使ったロボットの操作</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">モーションの作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physics.html">物理シミュレーションの実行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="connect.html">接続による拡張</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">hrpsys tutorials</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Choreonoidとの接続</a> &raquo;</li>
+      
+    <li>モーションの作成</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/choreonoid/motion.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="creating-motion-sequence">
+<h1>モーションの作成<a class="headerlink" href="#creating-motion-sequence" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>このチュートリアルではChoreonoidを使ってモーション列を編集する方法について学びます。</p>
+<div class="section" id="load-sample-project">
+<h2>サンプルプロジェクトのロード<a class="headerlink" href="#load-sample-project" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>メニューから&#8221;File&#8221; -&gt; &#8220;Open Project&#8221;を選択し、&#8221;share/project&#8221;フォルダの下の&#8221;GR001Sample.cnoid&#8221;を開いてください。</p>
+</div>
+<div class="section" id="configuration-for-your-own-project">
+<h2>独自のプロジェクト用の設定<a class="headerlink" href="#configuration-for-your-own-project" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>自分のロボットのためのモーションを編集したい場合、以下の設定を行ってください。</p>
+<p>メインメニューでの操作:</p>
+<ul class="simple">
+<li><p class="first">Worldアイテムを作成（ &#8220;File&#8221; -&gt; &#8220;New...&#8221; -&gt; &#8220;World&#8221;を選択）。</p>
+</li>
+<li><p class="first">Modelアイテムのロード（&#8221;File&#8221; -&gt; &#8220;Open...&#8221; -&gt; &#8220;OpenHRP Model File&#8221;を選択）。</p>
+</li>
+<li><p class="first">PoseSeqアイテムの作成（ &#8220;File&#8221; -&gt; &#8220;New...&#8221; -&gt; &#8220;PoseSeq&#8221;を選択）</p>
+</li>
+</ul>
+<p>モーション編集中に物理シミュレーションも行いたい場合は以下のアイテムも追加します:</p>
+<ul class="simple">
+<li><p class="first">floorモデルのロード（&#8221;File&#8221; -&gt; &#8220;Open...&#8221; -&gt; &#8220;OpenHRP Model File&#8221;を選択）</p>
+</li>
+<li><p class="first">AISTSimulatorアイテムを作成（&#8221;File&#8221; -&gt; &#8220;New...&#8221; -&gt; &#8220;AISTSimulator&#8221;を選択）。</p>
+</li>
+</ul>
+<p>Itemパネルでの操作:</p>
+<p>アイテムをドラッグアンドドロップして以下の順番で並べます（modelアイテムとsimulatorアイテムはworldアイテムの下、poseseqアイテムはmodelアイテムの下）。</p>
+<img alt="../_images/motion-config.png" src="../_images/motion-config.png" />
+</div>
+<div class="section" id="basic-motion-sequence-editing-process">
+<h2>モーション編集の基本操作<a class="headerlink" href="#basic-motion-sequence-editing-process" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Open pose roll view by selecting &#8220;View&#8221; -&gt; &#8220;Show View&#8221; -&gt; &#8220;Pose Roll&#8221; menu item.</p>
+<p>PoseSeqアイテムをクリックして選択しチェックボックスをオンにします。</p>
+<p>Click &#8220;Play Animation&#8221; button to play the motion.</p>
+<p>Pose rollパネルの&#8221;Insert&#8221;ボタンをクリックして、新しいキーフレームを挿入します。</p>
+<img alt="../_images/motion-editing.png" src="../_images/motion-editing.png" />
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="physics.html" class="btn btn-neutral float-right" title="物理シミュレーションの実行"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="kinematics.html" class="btn btn-neutral" title="順運動学と逆運動学を使ったロボットの操作"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, AIST.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+      <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

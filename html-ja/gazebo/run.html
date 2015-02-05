@@ -1,0 +1,255 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>最初のシミュレーションの実行 &mdash; hrpsys tutorials 0.0.1 ドキュメント</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="hrpsys tutorials 0.0.1 ドキュメント" href="../index.html"/>
+        <link rel="up" title="Gazeboとの接続" href="index.html"/>
+        <link rel="next" title="オリジナルのプロジェクトの作成" href="project.html"/>
+        <link rel="prev" title="インストール" href="install.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> hrpsys tutorials</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basics/index.html">基本的な使い方</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../basics/install.html">インストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/run.html">最初のシミュレーションの実行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/project.html">オリジナルのプロジェクトの作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/connect.html">接続による拡張</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">応用編</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../advanced/scripting.html">Pythonによるスクリプト作成</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Gazeboとの接続</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="install.html">インストール</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">最初のシミュレーションの実行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project.html">オリジナルのプロジェクトの作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="connect.html">接続による拡張</a></li>
+<li class="toctree-l2"><a class="reference internal" href="launchscript.html">rosスタックとの接続</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../choreonoid/index.html">Choreonoidとの接続</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../choreonoid/install.html">インストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../choreonoid/kinematics.html">順運動学と逆運動学を使ったロボットの操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../choreonoid/motion.html">モーションの作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../choreonoid/physics.html">物理シミュレーションの実行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../choreonoid/connect.html">接続による拡張</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">hrpsys tutorials</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Gazeboとの接続</a> &raquo;</li>
+      
+    <li>最初のシミュレーションの実行</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/gazebo/run.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="run-your-first-simulation">
+<h1>最初のシミュレーションの実行<a class="headerlink" href="#run-your-first-simulation" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="hrpsys-gazebo-simulator-command">
+<h2>hrpsys-gazebo-simulatorコマンド<a class="headerlink" href="#hrpsys-gazebo-simulator-command" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>hrpsys-gazebo-simulatorコマンドはシミュレータをロードし実行します。以下のように実行します:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ hrpsys-gazebo-simulator [project file] [gazebo world file] [options]
+</pre></div>
+</div>
+<p><a href="#id1"><span class="problematic" id="id2">**</span></a>プロジェクトファイル**はシステムの設定を定義するXML形式のファイルです（あとで説明します）。<a href="#id3"><span class="problematic" id="id4">**</span></a>gazeboワールドファイル**はシミュレーション世界を定義するXML形式のファイルです。</p>
+<p>hrpsys-gazebo-simulatorコマンドには以下のオプションがあります:</p>
+<dl class="option">
+<dt id="cmdoption-hrpsys-gazebo-simulator-nodisplay">
+<tt class="descname">-nodisplay</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-hrpsys-gazebo-simulator-nodisplay" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ヘッドレスモード</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-hrpsys-gazebo-simulator-realtime">
+<tt class="descname">-realtime</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-hrpsys-gazebo-simulator-realtime" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>実時間への同期</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-hrpsys-gazebo-simulator-endless">
+<tt class="descname">-endless</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-hrpsys-gazebo-simulator-endless" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>エンドレスモード</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-hrpsys-gazebo-simulator-h">
+<tt class="descname">-h</tt><tt class="descclassname"> --help</tt><a class="headerlink" href="#cmdoption-hrpsys-gazebo-simulator-h" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ヘルプを表示する</p>
+</dd></dl>
+
+</div>
+<div class="section" id="running-sample-project">
+<h2>サンプルプロジェクトのロード<a class="headerlink" href="#running-sample-project" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ロボットモデルを変換してシミュレーションワールドファイルを作成するために以下のコマンドを入力してください:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ simtrans -i `pkg-config openhrp3.1 --variable=prefix`/share/OpenHRP-3.1/sample/model/PA10/pa10.main.wrl -o $HOME/.gazebo/models/pa10.world
+</pre></div>
+</div>
+<p>プロジェクトファイルについてはhrpsys付属のサンプルをコピーします:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ cp `pkg-config --variable=prefix hrpsys-base`/share/hrpsys/samples/PA10/PA10simulation.xml mysimulation.xml
+</pre></div>
+</div>
+<p>シミュレーションを実行する前に、新しいターミナルを開いてroscoreサービスを実行してください:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ roscore
+</pre></div>
+</div>
+<p>hrpsys-gazebo-simulaorでプロジェクトとシミュレーションワールドを開きます:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ hrpsys-gazebo-simulator mysimulation.xml $HOME/.gazebo/models/pa10.world -endless
+</pre></div>
+</div>
+</div>
+<div class="section" id="interact-with-the-simulation-window">
+<h2>シミュレーション画面の操作<a class="headerlink" href="#interact-with-the-simulation-window" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>シミュレーション画面はgazeboのものと全く同じです。</p>
+<p><a href="#id1"><span class="problematic" id="id2">**</span></a>左クリックとドラッグ**でシミュレーション世界を平行移動できます。</p>
+<p><a href="#id1"><span class="problematic" id="id2">**</span></a>shiftキー + 左クリックとドラッグ**でシミュレーション世界を回転させることができます。</p>
+<img alt="../_images/main-window1.png" src="../_images/main-window1.png" />
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="project.html" class="btn btn-neutral float-right" title="オリジナルのプロジェクトの作成"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="install.html" class="btn btn-neutral" title="インストール"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, AIST.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+      <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
