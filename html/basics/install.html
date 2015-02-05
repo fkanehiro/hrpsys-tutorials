@@ -1,0 +1,226 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Install &mdash; hrpsys tutorials 0.0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="hrpsys tutorials 0.0.1 documentation" href="../index.html"/>
+        <link rel="up" title="Basic Usage" href="index.html"/>
+        <link rel="next" title="Run your first simulation" href="run.html"/>
+        <link rel="prev" title="Basic Usage" href="index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> hrpsys tutorials</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Basic Usage</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="run.html">Run your first simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project.html">Create your own project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="connect.html">Connect</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Advanced Topics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../advanced/scripting.html">Python scripting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gazebo/index.html">Use with Gazebo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gazebo/install.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gazebo/run.html">Run your first simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gazebo/project.html">Create your own project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gazebo/connect.html">Connect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gazebo/launchscript.html">Integrate with ros stack</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../choreonoid/index.html">Use with Choreonoid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../choreonoid/install.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../choreonoid/kinematics.html">Controlling robot with forward and inverse kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../choreonoid/motion.html">Creating motion sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../choreonoid/physics.html">Physics simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../choreonoid/connect.html">Connect</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">hrpsys tutorials</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Basic Usage</a> &raquo;</li>
+      
+    <li>Install</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/basics/install.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="install">
+<h1>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="install-using-ppa-recommended">
+<h2>Install using ppa (recommended)<a class="headerlink" href="#install-using-ppa-recommended" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo add-apt-repository ppa:hrg/daily
+<span class="nv">$ </span>sudo apt-get update
+<span class="nv">$ </span>sudo apt-get install hrpsys-base
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-from-source">
+<h2>Install from source<a class="headerlink" href="#install-from-source" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Source based installation is hard way.
+ppa based installation is highly recommended.</p>
+</div>
+<p>To install from source, we first need to install depending libraries.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install git jython libxml2-dev libsdl-dev libcv-dev libcvaux-dev libhighgui-dev libqhull-dev libglew-dev freeglut3-dev libxmu-dev python-dev libboost-python-dev ipython
+</pre></div>
+</div>
+<p>Clone most recent source from github.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git clone https://github.com/fkanehiro/hrpsys-base.git
+</pre></div>
+</div>
+<p>Then, run cmake and make to configure, compile and install.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd </span>hrpsys-base
+<span class="nv">$ </span>cmake .
+<span class="nv">$ </span>make
+<span class="nv">$ </span>sudo make install
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="run.html" class="btn btn-neutral float-right" title="Run your first simulation"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Basic Usage"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, AIST.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

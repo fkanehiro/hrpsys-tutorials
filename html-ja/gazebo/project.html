@@ -1,0 +1,296 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>オリジナルのプロジェクトの作成 &mdash; hrpsys tutorials 0.0.1 ドキュメント</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="hrpsys tutorials 0.0.1 ドキュメント" href="../index.html"/>
+        <link rel="up" title="Gazeboとの接続" href="index.html"/>
+        <link rel="next" title="接続による拡張" href="connect.html"/>
+        <link rel="prev" title="最初のシミュレーションの実行" href="run.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> hrpsys tutorials</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basics/index.html">基本的な使い方</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../basics/install.html">インストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/run.html">最初のシミュレーションの実行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/project.html">オリジナルのプロジェクトの作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/connect.html">接続による拡張</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">応用編</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../advanced/scripting.html">Pythonによるスクリプト作成</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Gazeboとの接続</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="install.html">インストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="run.html">最初のシミュレーションの実行</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">オリジナルのプロジェクトの作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="connect.html">接続による拡張</a></li>
+<li class="toctree-l2"><a class="reference internal" href="launchscript.html">rosスタックとの接続</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../choreonoid/index.html">Choreonoidとの接続</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../choreonoid/install.html">インストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../choreonoid/kinematics.html">順運動学と逆運動学を使ったロボットの操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../choreonoid/motion.html">モーションの作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../choreonoid/physics.html">物理シミュレーションの実行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../choreonoid/connect.html">接続による拡張</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">hrpsys tutorials</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Gazeboとの接続</a> &raquo;</li>
+      
+    <li>オリジナルのプロジェクトの作成</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/gazebo/project.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="create-your-own-project">
+<h1>オリジナルのプロジェクトの作成<a class="headerlink" href="#create-your-own-project" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>このチュートリアルでは、オリジナルのプロジェクトを作成する方法を学習します。</p>
+<p>hrpsys-gazebo-simulatorのプロジェクトファイルはXML形式のファイルです。プロジェクトファイルの作成には好きなテキストエディタを使うことができます。</p>
+<p>サンプルプロジェクトをローカルディレクトリにコピーします:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ cp `pkg-config --variable=prefix hrpsys-base`/share/hrpsys/samples/PA10/PA10simulation.xml mysimulation.xml
+</pre></div>
+</div>
+<div class="section" id="convert-the-robot-model-and-create-simulation-world">
+<h2>ロボットモデルの変換とワールドファイルの作成<a class="headerlink" href="#convert-the-robot-model-and-create-simulation-world" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>hrpsys-gazebo-simulatorは内部でgazeboシミュレータを使っています。そのためsdf形式で配布されている様々なロボットモデルを利用することができますが、ここでは前のチュートリアルで使っていたものと同じロボットモデルを使います。以下のコマンドを実行してロボットモデルの変換とワールドファイルの作成を行ってください:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ simtrans -i `pkg-config openhrp3.1 --variable=prefix`/share/OpenHRP-3.1/sample/model/simple_vehicle_with_camera.wrl -o $HOME/.gazebo/models/simple_vehicle_with_camera.world
+</pre></div>
+</div>
+</div>
+<div class="section" id="basic-structure-of-project-file">
+<h2>プロジェクトファイルの基本構成<a class="headerlink" href="#basic-structure-of-project-file" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>好きなテキストエディタを使ってプロジェクトファイルを開いてください:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ emacs mysimulation.xml
+</pre></div>
+</div>
+<p>テキストエディタでプロジェクトファイルを開くと以下の内容になっているはずです。</p>
+<div class="highlight-xml"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;</span>
+<span class="nt">&lt;grxui&gt;</span>
+   <span class="nt">&lt;mode</span> <span class="na">name=</span><span class="s">&quot;Simulation&quot;</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;item</span> <span class="na">class=</span><span class="s">&quot;com.generalrobotix.ui.item.GrxRTSItem&quot;</span> <span class="na">name=</span><span class="s">&quot;untitled&quot;</span> <span class="na">select=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;PA10Controller(Robot)0.period&quot;</span> <span class="na">value=</span><span class="s">&quot;0.005&quot;</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;HGcontroller0.period&quot;</span> <span class="na">value=</span><span class="s">&quot;0.005&quot;</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;HGcontroller0.factory&quot;</span> <span class="na">value=</span><span class="s">&quot;HGcontroller&quot;</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;connection&quot;</span> <span class="na">value=</span><span class="s">&quot;HGcontroller0.qOut:PA10Controller(Robot)0.qRef&quot;</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;connection&quot;</span> <span class="na">value=</span><span class="s">&quot;HGcontroller0.dqOut:PA10Controller(Robot)0.dqRef&quot;</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;connection&quot;</span> <span class="na">value=</span><span class="s">&quot;HGcontroller0.ddqOut:PA10Controller(Robot)0.ddqRef&quot;</span><span class="nt">/&gt;</span>
+     <span class="nt">&lt;/item&gt;</span>
+     <span class="nt">&lt;item</span> <span class="na">class=</span><span class="s">&quot;com.generalrobotix.ui.item.GrxModelItem&quot;</span> <span class="na">name=</span><span class="s">&quot;pa10&quot;</span> <span class="na">select=</span><span class="s">&quot;true&quot;</span> <span class="na">url=</span><span class="s">&quot;$(PROJECT_DIR)/../model/PA10/pa10.main.wrl&quot;</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;rtcName&quot;</span> <span class="na">value=</span><span class="s">&quot;PA10Controller(Robot)0&quot;</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;inport&quot;</span> <span class="na">value=</span><span class="s">&quot;qRef:JOINT_VALUE&quot;</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;inport&quot;</span> <span class="na">value=</span><span class="s">&quot;dqRef:JOINT_VELOCITY&quot;</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;inport&quot;</span> <span class="na">value=</span><span class="s">&quot;ddqRef:JOINT_ACCELERATION&quot;</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;outport&quot;</span> <span class="na">value=</span><span class="s">&quot;q:JOINT_VALUE&quot;</span><span class="nt">/&gt;</span>
+   ..snip..
+   <span class="nt">&lt;/mode&gt;</span>
+<span class="nt">&lt;/grxui&gt;</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="change-robot-model">
+<h2>ロボットモデルの変更<a class="headerlink" href="#change-robot-model" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>このチュートリアルではOpenHRPサンプルに付属する&#8221;simple_vehicle_with_camera&#8221;ロボットモデルを使います。</p>
+<p>まずは、モデル名とURLを変更します。以下の部分を:</p>
+<div class="highlight-xml"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="nt">&lt;item</span> <span class="na">class=</span><span class="s">&quot;com.generalrobotix.ui.item.GrxModelItem&quot;</span> <span class="na">name=</span><span class="s">&quot;pa10&quot;</span> <span class="na">select=</span><span class="s">&quot;true&quot;</span> <span class="na">url=</span><span class="s">&quot;$(PROJECT_DIR)/../model/PA10/pa10.main.wrl&quot;</span><span class="nt">&gt;</span>
+</pre></div>
+</td></tr></table></div>
+<p>以下のように変更してください:</p>
+<div class="highlight-xml"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="nt">&lt;item</span> <span class="na">class=</span><span class="s">&quot;com.generalrobotix.ui.item.GrxModelItem&quot;</span> <span class="na">name=</span><span class="s">&quot;simple_vehicle_with_camera&quot;</span> <span class="na">select=</span><span class="s">&quot;true&quot;</span> <span class="na">url=</span><span class="s">&quot;model://simple_vehicle_with_camera&quot;</span><span class="nt">&gt;</span>
+</pre></div>
+</td></tr></table></div>
+<p>次に、ロボットモデルの各プロパティを設定していきます。 <a href="#id1"><span class="problematic" id="id2">**</span></a>rtcName**と**in[out]port**プロパティは、ロボットモデルにRTコンポーネントとしてのインターフェースを作成するための設定です。 ここでは**rtcName**を&#8221;vehicle0&#8221;と設定しましょう。<a href="#id3"><span class="problematic" id="id4">**</span></a>in[out]port**プロパティは、元のファイルのままにしておいてください（この設定は、関節角、角速度、角加速度の各制御をロボットモデルに加えることができる設定です）。</p>
+<p>このロボットモデルについては仮想カメラを用いることができます。以下の例にある最後のoutport定義は仮想カメラに関するものです。&#8221;/simple_vehicle_with_camera/VISION_SENSOR1/left/image_raw&#8221;はgazebo-rosプラグインによって作成されたrosトピックです。最後の&#8221;VISION_SENSOR&#8221;の部分はデータ型を定義します。</p>
+<div class="highlight-xml"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span class="nt">&lt;item</span> <span class="na">class=</span><span class="s">&quot;com.generalrobotix.ui.item.GrxModelItem&quot;</span> <span class="na">name=</span><span class="s">&quot;simple_vehicle_with_camera&quot;</span> <span class="na">select=</span><span class="s">&quot;true&quot;</span> <span class="na">url=</span><span class="s">&quot;model://simple_vehicle_with_camera&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;isRobot&quot;</span> <span class="na">value=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;rtcName&quot;</span> <span class="na">value=</span><span class="s">&quot;vehicle0&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;inport&quot;</span> <span class="na">value=</span><span class="s">&quot;qRef:JOINT_VALUE&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;inport&quot;</span> <span class="na">value=</span><span class="s">&quot;dqRef:JOINT_VELOCITY&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;inport&quot;</span> <span class="na">value=</span><span class="s">&quot;ddqRef:JOINT_ACCELERATION&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;outport&quot;</span> <span class="na">value=</span><span class="s">&quot;q:JOINT_VALUE&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;outport&quot;</span> <span class="na">value=</span><span class="s">&quot;VISION_SENSOR1:/simple_vehicle_with_camera/VISION_SENSOR1/left/image_raw:VISION_SENSOR&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/item&gt;</span>
+</pre></div>
+</td></tr></table></div>
+<p>シミュレーションプロジェクトの作成が終わったので、hrpsys-gazebo-simulatorでプロジェクトを開いてみましょう:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ hrpsys-gazebo-simulator myproject.xml $HOME/.gazebo/models/simple_vehicle_with_camera.world -endless
+</pre></div>
+</div>
+<p>次のチュートリアルでは、オリジナルのコントローラにロボットを接続する方法を学習します。</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="connect.html" class="btn btn-neutral float-right" title="接続による拡張"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="run.html" class="btn btn-neutral" title="最初のシミュレーションの実行"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, AIST.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+      <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

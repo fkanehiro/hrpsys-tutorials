@@ -1,0 +1,255 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Run your first simulation &mdash; hrpsys tutorials 0.0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="hrpsys tutorials 0.0.1 documentation" href="../index.html"/>
+        <link rel="up" title="Use with Gazebo" href="index.html"/>
+        <link rel="next" title="Create your own project" href="project.html"/>
+        <link rel="prev" title="Install" href="install.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> hrpsys tutorials</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basics/index.html">Basic Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../basics/install.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/run.html">Run your first simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/project.html">Create your own project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/connect.html">Connect</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Advanced Topics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../advanced/scripting.html">Python scripting</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Use with Gazebo</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="install.html">Install</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Run your first simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project.html">Create your own project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="connect.html">Connect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="launchscript.html">Integrate with ros stack</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../choreonoid/index.html">Use with Choreonoid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../choreonoid/install.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../choreonoid/kinematics.html">Controlling robot with forward and inverse kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../choreonoid/motion.html">Creating motion sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../choreonoid/physics.html">Physics simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../choreonoid/connect.html">Connect</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">hrpsys tutorials</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Use with Gazebo</a> &raquo;</li>
+      
+    <li>Run your first simulation</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/gazebo/run.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="run-your-first-simulation">
+<h1>Run your first simulation<a class="headerlink" href="#run-your-first-simulation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="hrpsys-gazebo-simulator-command">
+<h2>hrpsys-gazebo-simulator command<a class="headerlink" href="#hrpsys-gazebo-simulator-command" title="Permalink to this headline">¶</a></h2>
+<p>The hrpsys-gazebo-simulator command loads and runs a simulation. It is called like follows:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ hrpsys-gazebo-simulator [project file] [gazebo world file] [options]
+</pre></div>
+</div>
+<p>Where <strong>project file</strong> is the xml file which defines system configuration (explained later).
+<strong>gazebo world file</strong> is the xml file which defines simulation world.</p>
+<p>The hrpsys-gazebo-simulator command has following options:</p>
+<dl class="option">
+<dt id="cmdoption-hrpsys-gazebo-simulator-nodisplay">
+<tt class="descname">-nodisplay</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-hrpsys-gazebo-simulator-nodisplay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Headless mode.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-hrpsys-gazebo-simulator-realtime">
+<tt class="descname">-realtime</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-hrpsys-gazebo-simulator-realtime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Synchronize to real world time.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-hrpsys-gazebo-simulator-endless">
+<tt class="descname">-endless</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-hrpsys-gazebo-simulator-endless" title="Permalink to this definition">¶</a></dt>
+<dd><p>Endless mode.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-hrpsys-gazebo-simulator-h">
+<tt class="descname">-h</tt><tt class="descclassname"> --help</tt><a class="headerlink" href="#cmdoption-hrpsys-gazebo-simulator-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show help message.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="running-sample-project">
+<h2>Running sample project<a class="headerlink" href="#running-sample-project" title="Permalink to this headline">¶</a></h2>
+<p>Run following command to convert the robot model and create simulation world:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ simtrans -i `pkg-config openhrp3.1 --variable=prefix`/share/OpenHRP-3.1/sample/model/PA10/pa10.main.wrl -o $HOME/.gazebo/models/pa10.world
+</pre></div>
+</div>
+<p>For project file, copy from hrpsys samples:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ cp `pkg-config --variable=prefix hrpsys-base`/share/hrpsys/samples/PA10/PA10simulation.xml mysimulation.xml
+</pre></div>
+</div>
+<p>Before running the simulation, open new terminal and run roscore service:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ roscore
+</pre></div>
+</div>
+<p>Open the project and simulation world in hrpsys-gazebo-simulator:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ hrpsys-gazebo-simulator mysimulation.xml $HOME/.gazebo/models/pa10.world -endless
+</pre></div>
+</div>
+</div>
+<div class="section" id="interact-with-the-simulation-window">
+<h2>Interact with the simulation window<a class="headerlink" href="#interact-with-the-simulation-window" title="Permalink to this headline">¶</a></h2>
+<p>Simulation window is just as same as the gazebo.</p>
+<p>To translate the simulation world <strong>left click and drag</strong>.</p>
+<p>You can rotate the simulation world by <strong>shift key + left click and drag</strong>.</p>
+<img alt="../_images/main-window1.png" src="../_images/main-window1.png" />
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="project.html" class="btn btn-neutral float-right" title="Create your own project"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="install.html" class="btn btn-neutral" title="Install"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, AIST.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

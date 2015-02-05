@@ -1,0 +1,375 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Connect &mdash; hrpsys tutorials 0.0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="hrpsys tutorials 0.0.1 documentation" href="../index.html"/>
+        <link rel="up" title="Basic Usage" href="index.html"/>
+        <link rel="next" title="Advanced Topics" href="../advanced/index.html"/>
+        <link rel="prev" title="Create your own project" href="project.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> hrpsys tutorials</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Basic Usage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="install.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="run.html">Run your first simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project.html">Create your own project</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Connect</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Advanced Topics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../advanced/scripting.html">Python scripting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gazebo/index.html">Use with Gazebo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gazebo/install.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gazebo/run.html">Run your first simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gazebo/project.html">Create your own project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gazebo/connect.html">Connect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gazebo/launchscript.html">Integrate with ros stack</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../choreonoid/index.html">Use with Choreonoid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../choreonoid/install.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../choreonoid/kinematics.html">Controlling robot with forward and inverse kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../choreonoid/motion.html">Creating motion sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../choreonoid/physics.html">Physics simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../choreonoid/connect.html">Connect</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">hrpsys tutorials</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Basic Usage</a> &raquo;</li>
+      
+    <li>Connect</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/basics/connect.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="connect">
+<h1>Connect<a class="headerlink" href="#connect" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial, we will learn how to connect simulation to our own controller.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Please finish <a class="reference internal" href="project.html"><em>Create your own project</em></a> tutorial, before proceed.</p>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>Before proceed, create configuration file named &#8220;rtc.conf&#8221; under the current folder (or place it to /etc/rtc.conf if you want to apply the configuration globally) with following content.</p>
+<div class="highlight-ini"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre>corba.nameservers: 127.0.0.1
+naming.formats: %n.rtc
+logger.enable: YES
+logger.log_level: NORMAL
+logger.file_name: stdout
+manager.shutdown_onrtcs: NO
+manager.is_master: YES
+manager.modules.load_path: ., /usr/lib, /usr/local/lib
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="basic-structure-of-project-file">
+<h2>Basic structure of project file<a class="headerlink" href="#basic-structure-of-project-file" title="Permalink to this headline">¶</a></h2>
+<p>As we have learned in previous tutorial, project file in hrpsys-simulatior is written in xml format. You can use your favorite text editor to create the project file.</p>
+<p>Open the project file with your text editor:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ emacs mysimulation.xml
+</pre></div>
+</div>
+<p>After the editor is opened, you will see following contents.</p>
+<div class="highlight-xml"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;</span>
+<span class="nt">&lt;grxui&gt;</span>
+   <span class="nt">&lt;mode</span> <span class="na">name=</span><span class="s">&quot;Simulation&quot;</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;item</span> <span class="na">class=</span><span class="s">&quot;com.generalrobotix.ui.item.GrxRTSItem&quot;</span> <span class="na">name=</span><span class="s">&quot;untitled&quot;</span> <span class="na">select=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;PA10Controller(Robot)0.period&quot;</span> <span class="na">value=</span><span class="s">&quot;0.005&quot;</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;HGcontroller0.period&quot;</span> <span class="na">value=</span><span class="s">&quot;0.005&quot;</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;HGcontroller0.factory&quot;</span> <span class="na">value=</span><span class="s">&quot;HGcontroller&quot;</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;connection&quot;</span> <span class="na">value=</span><span class="s">&quot;HGcontroller0.qOut:PA10Controller(Robot)0.qRef&quot;</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;connection&quot;</span> <span class="na">value=</span><span class="s">&quot;HGcontroller0.dqOut:PA10Controller(Robot)0.dqRef&quot;</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;connection&quot;</span> <span class="na">value=</span><span class="s">&quot;HGcontroller0.ddqOut:PA10Controller(Robot)0.ddqRef&quot;</span><span class="nt">/&gt;</span>
+     <span class="nt">&lt;/item&gt;</span>
+     <span class="nt">&lt;item</span> <span class="na">class=</span><span class="s">&quot;com.generalrobotix.ui.item.GrxModelItem&quot;</span> <span class="na">name=</span><span class="s">&quot;vehicle0&quot;</span> <span class="na">select=</span><span class="s">&quot;true&quot;</span> <span class="na">url=</span><span class="s">&quot;$(PROJECT_DIR)/../model/simple_vehicle_with_camera.wrl&quot;</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;isRobot&quot;</span> <span class="na">value=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;rtcName&quot;</span> <span class="na">value=</span><span class="s">&quot;vehicle0&quot;</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;inport&quot;</span> <span class="na">value=</span><span class="s">&quot;qRef:JOINT_VALUE&quot;</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;inport&quot;</span> <span class="na">value=</span><span class="s">&quot;dqRef:JOINT_VELOCITY&quot;</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;inport&quot;</span> <span class="na">value=</span><span class="s">&quot;ddqRef:JOINT_ACCELERATION&quot;</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;outport&quot;</span> <span class="na">value=</span><span class="s">&quot;q:JOINT_VALUE&quot;</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;outport&quot;</span> <span class="na">value=</span><span class="s">&quot;VISION_SENSOR1:VISION_SENSOR1:VISION_SENSOR&quot;</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;BODY.translation&quot;</span> <span class="na">value=</span><span class="s">&quot;0.0 0.0 0.2&quot;</span><span class="nt">/&gt;</span>
+     <span class="nt">&lt;/item&gt;</span>
+     ..snip..
+   <span class="nt">&lt;/mode&gt;</span>
+<span class="nt">&lt;/grxui&gt;</span>
+</pre></div>
+</td></tr></table></div>
+<p>To connect the simulator to the external control process, we will modify <strong>com.generalrobotix.ui.item.GrxRTSItem</strong> configuration item type.</p>
+<p>In  <strong>com.generalrobotix.ui.item.GrxRTSItem</strong> configuration item type, the name &#8220;<em>.period&#8221; is used to specify execution cycle of each RT-components. The name &#8220;</em>.factory&#8221; is used to specify the name of shared library used to create the instance of the component (described later). Properties with name &#8220;connection&#8221; specify the connection between the components.</p>
+</div>
+<div class="section" id="create-instance-of-rt-component">
+<h2>Create instance of RT-component<a class="headerlink" href="#create-instance-of-rt-component" title="Permalink to this headline">¶</a></h2>
+<p>hrpsys-base is not only a simulation environment, but also provide various components which can be used in your system.</p>
+<p>Please refer to this page to see list of all the available components:</p>
+<p><a class="reference external" href="http://fkanehiro.github.io/hrpsys-base/">http://fkanehiro.github.io/hrpsys-base/</a></p>
+<p>In the previous tutorial, we have configured our project to use &#8220;simple_vehicle_with_camera&#8221; robot model which has virtual camera interface. In this tutorial, let&#8217;s use <strong>CameraImageViewer</strong> component to monitor the camera input.</p>
+<p>To use the component, we first define the <strong>factory</strong> property to create an instance of the component. In below example, &#8220;CameraImageViewer0&#8221; is the name of the instance. &#8220;CameraImageViewer&#8221; is the name of the component itself. We also define the <strong>period</strong> property to set the execution cycle to 0.5 (twice a second).</p>
+<p>Then, we also define a connection from &#8220;VISION_SENSOR1&#8221; port of &#8220;vehicle0&#8221; robot model to &#8220;imageIn&#8221; port of &#8220;CameraImageViewer0&#8221; component instance.</p>
+<div class="highlight-xml"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span class="nt">&lt;item</span> <span class="na">class=</span><span class="s">&quot;com.generalrobotix.ui.item.GrxRTSItem&quot;</span> <span class="na">name=</span><span class="s">&quot;untitled&quot;</span> <span class="na">select=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;vehicle0.period&quot;</span> <span class="na">value=</span><span class="s">&quot;0.005&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;CameraImageViewer0.factory&quot;</span> <span class="na">value=</span><span class="s">&quot;CameraImageViewer&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;CameraImageViewer0.period&quot;</span> <span class="na">value=</span><span class="s">&quot;0.5&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;connection&quot;</span> <span class="na">value=</span><span class="s">&quot;vehicle0.VISION_SENSOR1:CameraImageViewer0.imageIn&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/item&gt;</span>
+</pre></div>
+</td></tr></table></div>
+<p>As a result, following system will be generated from this configuration:</p>
+<p class="graphviz">
+<img src="../_images/graphviz-7f2446f0e140e91b0916fd7d3db584dacb69cb24.png" alt="digraph foo {
+   rankdir=LR
+   &quot;vehicle0&quot; -&gt; &quot;CameraImageViewer0&quot; [headlabel=&quot;VISION_SENSOR1&quot;, taillabel=&quot;imageIn&quot;, labeldistance=6];
+}" />
+</p>
+<p>Now, we have finished configuring our system. Let&#8217;s open the project in hrpsys-simulator:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ hrpsys-simulator myproject.xml -realtime -endless
+</pre></div>
+</div>
+</div>
+<div class="section" id="connect-with-original-rt-component">
+<h2>Connect with original RT-component<a class="headerlink" href="#connect-with-original-rt-component" title="Permalink to this headline">¶</a></h2>
+<p>Here, we create original RT-component named &#8220;svcontrol&#8221;. First invoke following command to generate a skeleton code:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ rtc-template -bcxx --module-name=svcontrol --outport=q:TimedDoubleSeq
+</pre></div>
+</div>
+<p>Uncomment following line in generated svcontrol.h:</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="k">virtual</span> <span class="n">RTC</span><span class="o">::</span><span class="n">ReturnCode_t</span> <span class="n">onExecute</span><span class="p">(</span><span class="n">RTC</span><span class="o">::</span><span class="n">UniqueId</span> <span class="n">ec_id</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Uncomment and add following lines in svcontrol.cpp:</p>
+<div class="highlight-c++"><div class="highlight"><pre><span class="n">RTC</span><span class="o">::</span><span class="n">ReturnCode_t</span> <span class="n">svcontrol</span><span class="o">::</span><span class="n">onExecute</span><span class="p">(</span><span class="n">RTC</span><span class="o">::</span><span class="n">UniqueId</span> <span class="n">ec_id</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">m_q</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">length</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+  <span class="n">m_q</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">10.0</span><span class="p">;</span>
+  <span class="n">m_q</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">10.0</span><span class="p">;</span>
+  <span class="n">m_q</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mf">10.0</span><span class="p">;</span>
+  <span class="n">m_q</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mf">10.0</span><span class="p">;</span>
+  <span class="n">m_qOut</span><span class="p">.</span><span class="n">write</span><span class="p">();</span>
+  <span class="k">return</span> <span class="n">RTC</span><span class="o">::</span><span class="n">RTC_OK</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Then compile the component:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ make -f Makefile.svcontrol
+</pre></div>
+</div>
+<p>This component will give constant power to all the joints of the robot model.</p>
+<p>Add following lines to myproject.xml  to instantiate and connect the <strong>svcontrol</strong> component.</p>
+<div class="highlight-xml"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span class="nt">&lt;item</span> <span class="na">class=</span><span class="s">&quot;com.generalrobotix.ui.item.GrxRTSItem&quot;</span> <span class="na">name=</span><span class="s">&quot;untitled&quot;</span> <span class="na">select=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;vehicle0.period&quot;</span> <span class="na">value=</span><span class="s">&quot;0.005&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;CameraImageViewer0.factory&quot;</span> <span class="na">value=</span><span class="s">&quot;CameraImageViewer&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;CameraImageViewer0.period&quot;</span> <span class="na">value=</span><span class="s">&quot;0.5&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;svcontrol0.factory&quot;</span> <span class="na">value=</span><span class="s">&quot;svcontrol&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;svcontrol0.period&quot;</span> <span class="na">value=</span><span class="s">&quot;0.05&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;connection&quot;</span> <span class="na">value=</span><span class="s">&quot;vehicle0.VISION_SENSOR1:CameraImageViewer0.imageIn&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;connection&quot;</span> <span class="na">value=</span><span class="s">&quot;svcontrol0.q:vehicle0.dqRef&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/item&gt;</span>
+</pre></div>
+</td></tr></table></div>
+<p>As a result, following system will be generated from this configuration:</p>
+<p class="graphviz">
+<img src="../_images/graphviz-43e0e7454d84d687c53bd1809e725371b1c830d9.png" alt="digraph foo {
+   rankdir=LR
+   &quot;svcontrol0&quot; -&gt; &quot;vehicle0&quot; [headlabel=&quot;q&quot;, taillabel=&quot;dqRef&quot;, labeldistance=4];
+   &quot;vehicle0&quot; -&gt; &quot;CameraImageViewer0&quot; [headlabel=&quot;VISION_SENSOR1&quot;, taillabel=&quot;imageIn&quot;, labeldistance=6];
+}" />
+</p>
+<p>Now, we have finished configuring our system. Let&#8217;s open the project in hrpsys-simulator:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ hrpsys-simulator myproject.xml -realtime -endless
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../advanced/index.html" class="btn btn-neutral float-right" title="Advanced Topics"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="project.html" class="btn btn-neutral" title="Create your own project"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, AIST.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
