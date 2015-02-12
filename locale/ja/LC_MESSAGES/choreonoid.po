@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: hrpsys tutorials 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-11 02:11+0900\n"
-"PO-Revision-Date: 2014-12-13 14:44+0900\n"
+"PO-Revision-Date: 2015-02-12 14:08+0900\n"
 "Last-Translator: Yosuke Matsusaka <yosuke.matsusaka@gmail.com>\n"
 "Language-Team:  <yosuke.matsusaka@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -66,7 +66,7 @@ msgstr "順運動学を使ったロボットの操作"
 
 #: ../../choreonoid/kinematics.rst:27
 msgid "First, press the \"Forward Kinematics Mode\" button."
-msgstr " \"Forward Kinematics Mode\"ボタンをクリックします。"
+msgstr "\"Forward Kinematics Mode\"ボタンをクリックします。"
 
 #: ../../choreonoid/kinematics.rst:31 ../../choreonoid/kinematics.rst:48
 msgid ""
@@ -256,7 +256,7 @@ msgid ""
 "Open pose roll view by selecting \"View\" -> \"Show View\" -> \"Pose Roll\" "
 "menu item."
 msgstr ""
-" メニューから\"View\" -> \"Show View\" -> \"Pose Roll\"を選択してpose roll"
+"メニューから\"View\" -> \"Show View\" -> \"Pose Roll\"を選択してpose roll"
 "ビューを開きます。"
 
 #: ../../choreonoid/motion.rst:39
@@ -265,7 +265,7 @@ msgstr "PoseSeqアイテムをクリックして選択しチェックボック�
 
 #: ../../choreonoid/motion.rst:41
 msgid "Click \"Play Animation\" button to play the motion."
-msgstr " \"Play Animation\"ボタンを押してモーションを再生します。"
+msgstr "\"Play Animation\"ボタンを押してモーションを再生します。"
 
 #: ../../choreonoid/motion.rst:43
 msgid ""
@@ -341,7 +341,7 @@ msgid ""
 "component of your own (see :doc:`../basics/connect`)."
 msgstr ""
 "hrpsys-baseに同封された各コンポーネントを使うことや独自のコンポーネントを実装"
-"することもできます（:doc:`../basics/connect`参照）。"
+"することもできます（ :doc:`../basics/connect` 参照）。"
 
 #: ../../choreonoid/motion.rst:10
 msgid ""
