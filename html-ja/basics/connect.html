@@ -207,16 +207,16 @@ manager.modules.load_path: ., /usr/lib, /usr/local/lib
 <span class="nt">&lt;/grxui&gt;</span>
 </pre></div>
 </td></tr></table></div>
-<p>シミュレータを外部の制御プロセスに接続するために**com.generalrobotix.ui.item.GrxRTSItem**を編集します。</p>
-<p><a href="#id1"><span class="problematic" id="id2">**</span></a>com.generalrobotix.ui.item.GrxRTSItem**設定項目では、&#8221;<em>.period&#8221;が各RTコンポーネントの実行周期を設定します。&#8221;</em>.factory&#8221;はコンポーネントのインスタンスを作成するのに用いられる共有ライブラリを設定します（詳細はあとで説明します）。&#8221;connection&#8221;はコンポーネント間の接続を設定します。</p>
+<p>シミュレータを外部の制御プロセスに接続するために <strong>com.generalrobotix.ui.item.GrxRTSItem</strong> を編集します。</p>
+<p><strong>com.generalrobotix.ui.item.GrxRTSItem</strong> 設定項目では、&#8221;<em>.period&#8221;が各RTコンポーネントの実行周期を設定します。&#8221;</em>.factory&#8221;はコンポーネントのインスタンスを作成するのに用いられる共有ライブラリを設定します（詳細はあとで説明します）。&#8221;connection&#8221;はコンポーネント間の接続を設定します。</p>
 </div>
 <div class="section" id="create-instance-of-rt-component">
 <h2>RTコンポーネントのインスタンスを作成する<a class="headerlink" href="#create-instance-of-rt-component" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>hrpsys-baseはシミュレーション環境を提供するだけでなく、システム構築に利用することができる様々なコンポーネントも提供します。</p>
 <p>すべてのコンポーネントのリストを以下のページから一覧できます:</p>
 <p><a class="reference external" href="http://fkanehiro.github.io/hrpsys-base/">http://fkanehiro.github.io/hrpsys-base/</a></p>
-<p>前のチュートリアルでは仮想カメラを持った&#8221;simple_vehicle_with_camera&#8221;ロボットモデルを使うようにプロジェクトを設定しました。今回のチュートリアルでは、<a href="#id1"><span class="problematic" id="id2">**</span></a>CameraImageViewer**コンポーネントを使ってカメラからの入力を表示してみましょう。</p>
-<p>RTコンポーネントを使うためには、まず**factory**プロパティを設定してコンポーネントのインスタンスを作成します。以下の例では&#8221;CameraImageViewer0&#8221;がインスタンスの名前です。&#8221;CameraImageViewer&#8221;はコンポーネントの名前です。コンポーネントの実行周期を設定するために**period**プロパティも定義します。</p>
+<p>前のチュートリアルでは仮想カメラを持った&#8221;simple_vehicle_with_camera&#8221;ロボットモデルを使うようにプロジェクトを設定しました。今回のチュートリアルでは、 <strong>CameraImageViewer</strong> コンポーネントを使ってカメラからの入力を表示してみましょう。</p>
+<p>RTコンポーネントを使うためには、まず <strong>factory</strong> プロパティを設定してコンポーネントのインスタンスを作成します。以下の例では&#8221;CameraImageViewer0&#8221;がインスタンスの名前です。&#8221;CameraImageViewer&#8221;はコンポーネントの名前です。コンポーネントの実行周期を設定するために <strong>period</strong> プロパティも定義します。</p>
 <p>そして、&#8221;vehicle0&#8221;コンポーネントの&#8221;VISION_SENSOR1&#8221;ポートと&#8221;CameraImageViewer0&#8221;コンポーネントの &#8220;imageIn&#8221;ポートを接続します。</p>
 <div class="highlight-xml"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -271,7 +271,7 @@ manager.modules.load_path: ., /usr/lib, /usr/local/lib
 </pre></div>
 </div>
 <p>このコンポーネントはロボットモデルのすべての関節に一定の力を加える制御をします。</p>
-<p><a href="#id1"><span class="problematic" id="id2">**</span></a>svcontrol**コンポーネントをインスタンス化し、シミュレータに接続するために、myproject.xmlに以下の設定を追加してください。</p>
+<p><strong>svcontrol</strong> コンポーネントをインスタンス化し、シミュレータに接続するために、myproject.xmlに以下の設定を追加してください。</p>
 <div class="highlight-xml"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3

@@ -178,7 +178,7 @@
 <span class="nt">&lt;/grxui&gt;</span>
 </pre></div>
 </td></tr></table></div>
-<p>オリジナルのシミュレーションプロジェクトを作成するには、各設定項目を編集する必要があります。各設定項目は**classアトリビュート**によって区別されます。hrpsys-simulatorには現在以下の種類の設定項目があります:</p>
+<p>オリジナルのシミュレーションプロジェクトを作成するには、各設定項目を編集する必要があります。各設定項目は <strong>classアトリビュート</strong> によって区別されます。hrpsys-simulatorには現在以下の種類の設定項目があります:</p>
 <dl class="docutils">
 <dt>com.generalrobotix.ui.item.GrxRTSItem</dt>
 <dd><p class="first last">RTコンポーネントの初期化と接続を設定する</p>
@@ -210,7 +210,7 @@
 </pre></div>
 </td></tr></table></div>
 <p>&#8220;$(PROJECT_DIR)&#8221;はOpenHRPのサンプルプロジェクトディレクトリの位置で置き換えられます（多くの場合、 /usr/local/share/OpenHRP-3.1/samples/projectディレクトリです）。</p>
-<p>次に、ロボットモデルの各プロパティを設定していきます。 <a href="#id1"><span class="problematic" id="id2">**</span></a>rtcName**と**in[out]port**プロパティは、ロボットモデルにRTコンポーネントとしてのインターフェースを作成するための設定です。 ここでは**rtcName**を&#8221;vehicle0&#8221;と設定しましょう。<a href="#id3"><span class="problematic" id="id4">**</span></a>in[out]port**プロパティは、元のファイルのままにしておいてください（この設定は、関節角、角速度、角加速度の各制御をロボットモデルに加えることができる設定です）。</p>
+<p>次に、ロボットモデルの各プロパティを設定していきます。 <strong>rtcName</strong> と <strong>in[out]port</strong> プロパティは、ロボットモデルにRTコンポーネントとしてのインターフェースを作成するための設定です。 ここでは <strong>rtcName</strong> を&#8221;vehicle0&#8221;と設定しましょう。 <strong>in[out]port</strong> プロパティは、元のファイルのままにしておいてください（この設定は、関節角、角速度、角加速度の各制御をロボットモデルに加えることができる設定です）。</p>
 <p>このモデルについては仮想カメラを用いることができます。以下の例のoutport設定の最後の行は仮想カメラに関するものです。&#8221;VISION_SENSOR1&#8221;は仮想カメラの名前でモデルファイルの中で定義された名前と一致する必要があります。最後の&#8221;VISION_SENSOR&#8221;の部分はデータ型を定義します。</p>
 <p>最後の&#8221;BODY.translation&#8221;の行は、ロボットのシミュレーション世界での初期位置を設定します。</p>
 <div class="highlight-xml"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
