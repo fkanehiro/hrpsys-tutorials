@@ -23,7 +23,7 @@ To install from source, we first need to install depending libraries.
 
 .. code-block:: bash
 
-   $ sudo apt-get install git jython libxml2-dev libsdl-dev libcv-dev libcvaux-dev libhighgui-dev libqhull-dev libglew-dev freeglut3-dev libxmu-dev python-dev libboost-python-dev ipython
+   $ sudo apt-get install git jython doxygen ipython cmake libxml2-dev libsdl-dev libcv-dev libcvaux-dev libhighgui-dev libqhull-dev libglew-dev freeglut3-dev libxmu-dev python-dev libboost-python-dev libboost-thread-dev libboost-program-options-dev libboost-signals-dev libboost-regex-dev liblapack-dev libopencv-dev liblas-dev libeigen3-dev
 
 Clone most recent source from github.
 
