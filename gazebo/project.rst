@@ -91,6 +91,6 @@ Specifically for this model, we can also use virtual camera. The final outport d
 
 Now, we have finished creating our own simulation project. Let's open the project in hrpsys-simulator::
 
-  $ hrpsys-gazebo-simulator myproject.xml $HOME/.gazebo/models/simple_vehicle_with_camera.world -endless
+  $ hrpsys-gazebo-simulator mysimulation.xml $HOME/.gazebo/models/simple_vehicle_with_camera.world -endless
 
 In the next tutorial, we will learn how to connect the robot to our own controller.

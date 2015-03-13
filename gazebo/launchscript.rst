@@ -31,5 +31,5 @@ Then modify the topic name defined in the previous project file from "image_raw"
 
 Now, we have finished configuring our system. Let's open the project in hrpsys-gazebo-simulator::
 
-  $ hrpsys-gazebo-simulator myproject.xml $HOME/.gazebo/models/simple_vehicle_with_camera.world -endless
+  $ hrpsys-gazebo-simulator mysimulation.xml $HOME/.gazebo/models/simple_vehicle_with_camera.world -endless
 
