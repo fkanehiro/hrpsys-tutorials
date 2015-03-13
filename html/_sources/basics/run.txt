@@ -82,9 +82,9 @@ Enter following command to start PA10 simulation::
 Interact with the simulation window
 ===================================
 
-You can rotate the simulation world by **right click and drag**.
+You can rotate the simulation world by **left click and drag**.
 
-To translate the simulation world **left click and drag**.
+To translate the simulation world **right click and drag**.
 
 You can also use **mouse wheel** to zoom in and zoom out.
 

@@ -14,7 +14,7 @@
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -25,6 +25,8 @@
   
   
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
   
 
   
@@ -45,9 +47,12 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-nav-search">
-        <a href="../index.html" class="fa fa-home"> hrpsys tutorials</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+        
+          <a href="../index.html" class="fa fa-home"> hrpsys tutorials</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -57,8 +62,9 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
-        
-            <ul class="current">
+          
+          
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../basics/index.html">Basic Usage</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../basics/install.html">Install</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../basics/run.html">Run your first simulation</a></li>
@@ -88,6 +94,7 @@
 </li>
 </ul>
 
+          
         
       </div>
       &nbsp;
@@ -120,7 +127,7 @@
   </ul>
   <hr/>
 </div>
-          <div role="main">
+          <div role="main" class="document">
             
   <div class="section" id="connect">
 <h1>Connect<a class="headerlink" href="#connect" title="Permalink to this headline">¶</a></h1>
@@ -237,7 +244,7 @@ manager.modules.load_path: ., /usr/lib, /usr/local/lib
 }" />
 </p>
 <p>Now, we have finished configuring our system. Let&#8217;s open the project in hrpsys-gazebo-simulator:</p>
-<div class="highlight-python"><div class="highlight"><pre>$ hrpsys-gazebo-simulator myproject.xml $HOME/.gazebo/models/simple_vehicle_with_camera.world -endless
+<div class="highlight-python"><div class="highlight"><pre>$ hrpsys-gazebo-simulator mysimulation.xml $HOME/.gazebo/models/simple_vehicle_with_camera.world -endless
 </pre></div>
 </div>
 </div>
@@ -269,7 +276,7 @@ manager.modules.load_path: ., /usr/lib, /usr/local/lib
 </pre></div>
 </div>
 <p>This component will give constant power to all the joints of the robot model.</p>
-<p>Add following lines to myproject.xml  to instantiate and connect the <strong>svcontrol</strong> component.</p>
+<p>Add following lines to mysimulation.xml  to instantiate and connect the <strong>svcontrol</strong> component.</p>
 <div class="highlight-xml"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -298,7 +305,7 @@ manager.modules.load_path: ., /usr/lib, /usr/local/lib
 }" />
 </p>
 <p>Now, we have finished configuring our system. Let&#8217;s open the project in hrpsys-gazebo-simulator and confirm the result:</p>
-<div class="highlight-python"><div class="highlight"><pre>$ hrpsys-gazebo-simulator myproject.xml $HOME/.gazebo/models/simple_vehicle_with_camera.world -endless
+<div class="highlight-python"><div class="highlight"><pre>$ hrpsys-gazebo-simulator mysimulation.xml $HOME/.gazebo/models/simple_vehicle_with_camera.world -endless
 </pre></div>
 </div>
 </div>
@@ -310,7 +317,7 @@ manager.modules.load_path: ., /usr/lib, /usr/local/lib
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="launchscript.html" class="btn btn-neutral float-right" title="Integrate with ros stack"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="launchscript.html" class="btn btn-neutral float-right" title="Integrate with ros stack">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="project.html" class="btn btn-neutral" title="Create your own project"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -326,7 +333,8 @@ manager.modules.load_path: ., /usr/lib, /usr/local/lib
     </p>
   </div>
 
-  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
 </footer>
         </div>
       </div>
@@ -351,7 +359,7 @@ manager.modules.load_path: ., /usr/lib, /usr/local/lib
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 

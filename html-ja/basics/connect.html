@@ -14,7 +14,7 @@
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -25,6 +25,8 @@
   
   
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
   
 
   
@@ -45,9 +47,12 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-nav-search">
-        <a href="../index.html" class="fa fa-home"> hrpsys tutorials</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+        
+          <a href="../index.html" class="fa fa-home"> hrpsys tutorials</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -57,8 +62,9 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
-        
-            <ul class="current">
+          
+          
+              <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">基本的な使い方</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="install.html">インストール</a></li>
 <li class="toctree-l2"><a class="reference internal" href="run.html">最初のシミュレーションの実行</a></li>
@@ -88,6 +94,7 @@
 </li>
 </ul>
 
+          
         
       </div>
       &nbsp;
@@ -120,7 +127,7 @@
   </ul>
   <hr/>
 </div>
-          <div role="main">
+          <div role="main" class="document">
             
   <div class="section" id="connect">
 <h1>接続による拡張<a class="headerlink" href="#connect" title="このヘッドラインへのパーマリンク">¶</a></h1>
@@ -239,7 +246,7 @@ manager.modules.load_path: ., /usr/lib, /usr/local/lib
 }" />
 </p>
 <p>これでシステムの設定は終了です。hrpsys-simulatorでプロジェクトを開いてみましょう:</p>
-<div class="highlight-python"><div class="highlight"><pre>$ hrpsys-simulator myproject.xml -realtime -endless
+<div class="highlight-python"><div class="highlight"><pre>$ hrpsys-simulator mysimulation.xml -realtime -endless
 </pre></div>
 </div>
 </div>
@@ -300,7 +307,7 @@ manager.modules.load_path: ., /usr/lib, /usr/local/lib
 }" />
 </p>
 <p>これでシステムの設定は終了です。hrpsys-simulatorでプロジェクトを開いてみましょう:</p>
-<div class="highlight-python"><div class="highlight"><pre>$ hrpsys-simulator myproject.xml -realtime -endless
+<div class="highlight-python"><div class="highlight"><pre>$ hrpsys-simulator mysimulation.xml -realtime -endless
 </pre></div>
 </div>
 </div>
@@ -312,7 +319,7 @@ manager.modules.load_path: ., /usr/lib, /usr/local/lib
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../advanced/index.html" class="btn btn-neutral float-right" title="応用編"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../advanced/index.html" class="btn btn-neutral float-right" title="応用編">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="project.html" class="btn btn-neutral" title="オリジナルのプロジェクトの作成"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -328,7 +335,8 @@ manager.modules.load_path: ., /usr/lib, /usr/local/lib
     </p>
   </div>
 
-  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
 </footer>
         </div>
       </div>
@@ -354,7 +362,7 @@ manager.modules.load_path: ., /usr/lib, /usr/local/lib
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
       <script type="text/javascript" src="../_static/translations.js"></script>
-      <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 

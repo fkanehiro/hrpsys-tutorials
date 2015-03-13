@@ -106,7 +106,7 @@ As a result, following system will be generated from this configuration:
 
 Now, we have finished configuring our system. Let's open the project in hrpsys-simulator::
 
-  $ hrpsys-simulator myproject.xml -realtime -endless
+  $ hrpsys-simulator mysimulation.xml -realtime -endless
 
 
 Connect with original RT-component
@@ -143,7 +143,7 @@ Then compile the component::
 
 This component will give constant power to all the joints of the robot model.
 
-Add following lines to myproject.xml  to instantiate and connect the **svcontrol** component.
+Add following lines to mysimulation.xml  to instantiate and connect the **svcontrol** component.
 
 .. code-block:: xml
    :linenos:
@@ -170,4 +170,4 @@ As a result, following system will be generated from this configuration:
 
 Now, we have finished configuring our system. Let's open the project in hrpsys-simulator::
 
-  $ hrpsys-simulator myproject.xml -realtime -endless
+  $ hrpsys-simulator mysimulation.xml -realtime -endless

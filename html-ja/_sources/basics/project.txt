@@ -109,7 +109,7 @@ The final "BODY.translation" part specifies the position of the robot model in t
 
 Now, we have finished creating our own simulation project. Let's open the project in hrpsys-simulator::
 
-  $ hrpsys-simulator myproject.xml -showsensors
+  $ hrpsys-simulator mysimulation.xml -showsensors
 
 Can you see the robot in the world? You have probably seen empty world! In fact, we had to create a floor to support our vehicle to stay within our sight.
 
@@ -140,6 +140,6 @@ Please add following lines to the project file:
 
 Now, let's open the project in hrpsys-simulator::
 
-  $ hrpsys-simulator myproject.xml -showsensors
+  $ hrpsys-simulator mysimulation.xml -showsensors
 
 In the next tutorial, we will learn how to connect the robot to our own controller.

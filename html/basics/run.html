@@ -14,7 +14,7 @@
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -25,6 +25,8 @@
   
   
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
   
 
   
@@ -45,9 +47,12 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-nav-search">
-        <a href="../index.html" class="fa fa-home"> hrpsys tutorials</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+        
+          <a href="../index.html" class="fa fa-home"> hrpsys tutorials</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -57,8 +62,9 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
-        
-            <ul class="current">
+          
+          
+              <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Basic Usage</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="install.html">Install</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Run your first simulation</a></li>
@@ -88,6 +94,7 @@
 </li>
 </ul>
 
+          
         
       </div>
       &nbsp;
@@ -120,7 +127,7 @@
   </ul>
   <hr/>
 </div>
-          <div role="main">
+          <div role="main" class="document">
             
   <div class="section" id="run-your-first-simulation">
 <h1>Run your first simulation<a class="headerlink" href="#run-your-first-simulation" title="Permalink to this headline">¶</a></h1>
@@ -134,79 +141,79 @@
 <p>The hrpsys-simulator command has following options:</p>
 <dl class="option">
 <dt id="cmdoption-hrpsys-simulator-nodisplay">
-<tt class="descname">-nodisplay</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-hrpsys-simulator-nodisplay" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-nodisplay</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-hrpsys-simulator-nodisplay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Headless mode.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-hrpsys-simulator-realtime">
-<tt class="descname">-realtime</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-hrpsys-simulator-realtime" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-realtime</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-hrpsys-simulator-realtime" title="Permalink to this definition">¶</a></dt>
 <dd><p>Synchronize to real world time.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-hrpsys-simulator-usebbox">
-<tt class="descname">-usebbox</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-hrpsys-simulator-usebbox" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-usebbox</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-hrpsys-simulator-usebbox" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use bounding box for collision detection.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-hrpsys-simulator-endless">
-<tt class="descname">-endless</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-hrpsys-simulator-endless" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-endless</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-hrpsys-simulator-endless" title="Permalink to this definition">¶</a></dt>
 <dd><p>Endless mode.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-hrpsys-simulator-showsensors">
-<tt class="descname">-showsensors</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-hrpsys-simulator-showsensors" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-showsensors</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-hrpsys-simulator-showsensors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Visualize sensors.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-hrpsys-simulator-size">
-<tt class="descname">-size</tt><tt class="descclassname"> [pixels]</tt><a class="headerlink" href="#cmdoption-hrpsys-simulator-size" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-size</code><code class="descclassname"> [pixels]</code><a class="headerlink" href="#cmdoption-hrpsys-simulator-size" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify window size in pixels.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-hrpsys-simulator-no-default-lights">
-<tt class="descname">-no-default-lights</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-hrpsys-simulator-no-default-lights" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-no-default-lights</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-hrpsys-simulator-no-default-lights" title="Permalink to this definition">¶</a></dt>
 <dd><p>Disable ambient light (simulation environment will be dark).</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-hrpsys-simulator-max-edge-length">
-<tt class="descname">-max-edge-length</tt><tt class="descclassname"> [value]</tt><a class="headerlink" href="#cmdoption-hrpsys-simulator-max-edge-length" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-max-edge-length</code><code class="descclassname"> [value]</code><a class="headerlink" href="#cmdoption-hrpsys-simulator-max-edge-length" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify maximum length of polygon edge (if exceed, polygon will be divided to improve rendering quality).</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-hrpsys-simulator-max-log-length">
-<tt class="descname">-max-log-length</tt><tt class="descclassname"> [value]</tt><a class="headerlink" href="#cmdoption-hrpsys-simulator-max-log-length" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-max-log-length</code><code class="descclassname"> [value]</code><a class="headerlink" href="#cmdoption-hrpsys-simulator-max-log-length" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify maximum size of the log.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-hrpsys-simulator-exit-on-finish">
-<tt class="descname">-exit-on-finish</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-hrpsys-simulator-exit-on-finish" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-exit-on-finish</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-hrpsys-simulator-exit-on-finish" title="Permalink to this definition">¶</a></dt>
 <dd><p>Exit the program when the simulation finish.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-hrpsys-simulator-record">
-<tt class="descname">-record</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-hrpsys-simulator-record" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-record</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-hrpsys-simulator-record" title="Permalink to this definition">¶</a></dt>
 <dd><p>Record the simulation as movie.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-hrpsys-simulator-bg">
-<tt class="descname">-bg</tt><tt class="descclassname"> [r] [g] [b]</tt><a class="headerlink" href="#cmdoption-hrpsys-simulator-bg" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-bg</code><code class="descclassname"> [r] [g] [b]</code><a class="headerlink" href="#cmdoption-hrpsys-simulator-bg" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify background color.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-hrpsys-simulator-h">
-<tt class="descname">-h</tt><tt class="descclassname"> --help</tt><a class="headerlink" href="#cmdoption-hrpsys-simulator-h" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-h</code><code class="descclassname"> --help</code><a class="headerlink" href="#cmdoption-hrpsys-simulator-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Show help message.</p>
 </dd></dl>
 
@@ -225,8 +232,8 @@ Enter following command to run the model loader:</p>
 </div>
 <div class="section" id="interact-with-the-simulation-window">
 <h2>Interact with the simulation window<a class="headerlink" href="#interact-with-the-simulation-window" title="Permalink to this headline">¶</a></h2>
-<p>You can rotate the simulation world by <strong>right click and drag</strong>.</p>
-<p>To translate the simulation world <strong>left click and drag</strong>.</p>
+<p>You can rotate the simulation world by <strong>left click and drag</strong>.</p>
+<p>To translate the simulation world <strong>right click and drag</strong>.</p>
 <p>You can also use <strong>mouse wheel</strong> to zoom in and zoom out.</p>
 <p>There is also some command to control the simulation, <strong>click the simulation window and type &#8220;h&#8221; key</strong> to see all the commands.</p>
 <p><strong>Click the simulation window and type &#8220;q&#8221; key</strong> to quit the simulation.</p>
@@ -240,7 +247,7 @@ Enter following command to run the model loader:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="project.html" class="btn btn-neutral float-right" title="Create your own project"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="project.html" class="btn btn-neutral float-right" title="Create your own project">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="install.html" class="btn btn-neutral" title="Install"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -256,7 +263,8 @@ Enter following command to run the model loader:</p>
     </p>
   </div>
 
-  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
 </footer>
         </div>
       </div>
@@ -281,7 +289,7 @@ Enter following command to run the model loader:</p>
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
