@@ -429,10 +429,5 @@ msgstr "シミュレーションを実行する前に、新しいターミナル
 msgid ""
 "Add following lines to mysimulation.xml  to instantiate and connect the "
 "**svcontrol** component."
-msgstr ""
+msgstr "**svcontrol** コンポーネントをインスタンス化し、シミュレータに接続するために、mysimulation.xmlに以下の設定を追加してください。"
 
-#~ msgid ""
-#~ "Add following lines to myproject.xml  to instantiate and connect the "
-#~ "**svcontrol** component."
-#~ msgstr ""
-#~ "**svcontrol** コンポーネントをインスタンス化し、シミュレータに接続するために、myproject.xmlに以下の設定を追加してください。"
