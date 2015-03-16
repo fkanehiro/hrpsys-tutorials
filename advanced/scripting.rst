@@ -10,12 +10,13 @@ Below is the example script:
    :linenos:
 
    import hrpsys
+   import hrpsysext
    import commands
 
    openhrp_dir = commands.getoutput("pkg-config --variable=prefix openhrp3.1")
    model_dir="file://"+openhrp_dir+"/share/OpenHRP-3.1/sample/model/"
 
-   sim = hrpsys.Simulator()
+   sim = hrpsysext.Simulator()
    sim.initViewer()
    box  = sim.loadBody("box",  model_dir+"box.wrl")
    box.rootLink().R = [0,0,0]
@@ -39,8 +40,9 @@ You can also construct whole the simulation world only by python script:
    :linenos:
 
    import hrpsys
+   import hrpsysext
 
-   sim = hrpsys.Simulator()
+   sim = hrpsysext.Simulator()
    sim.initViewer()
 
    body = sim.createBody("body")
