@@ -146,13 +146,15 @@
 11
 12
 13
-14</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">hrpsys</span>
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">hrpsys</span>
+<span class="kn">import</span> <span class="nn">hrpsysext</span>
 <span class="kn">import</span> <span class="nn">commands</span>
 
 <span class="n">openhrp_dir</span> <span class="o">=</span> <span class="n">commands</span><span class="o">.</span><span class="n">getoutput</span><span class="p">(</span><span class="s">&quot;pkg-config --variable=prefix openhrp3.1&quot;</span><span class="p">)</span>
 <span class="n">model_dir</span><span class="o">=</span><span class="s">&quot;file://&quot;</span><span class="o">+</span><span class="n">openhrp_dir</span><span class="o">+</span><span class="s">&quot;/share/OpenHRP-3.1/sample/model/&quot;</span>
 
-<span class="n">sim</span> <span class="o">=</span> <span class="n">hrpsys</span><span class="o">.</span><span class="n">Simulator</span><span class="p">()</span>
+<span class="n">sim</span> <span class="o">=</span> <span class="n">hrpsysext</span><span class="o">.</span><span class="n">Simulator</span><span class="p">()</span>
 <span class="n">sim</span><span class="o">.</span><span class="n">initViewer</span><span class="p">()</span>
 <span class="n">box</span>  <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">loadBody</span><span class="p">(</span><span class="s">&quot;box&quot;</span><span class="p">,</span>  <span class="n">model_dir</span><span class="o">+</span><span class="s">&quot;box.wrl&quot;</span><span class="p">)</span>
 <span class="n">box</span><span class="o">.</span><span class="n">rootLink</span><span class="p">()</span><span class="o">.</span><span class="n">R</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
@@ -164,12 +166,12 @@
 </td></tr></table></div>
 <p>This script will:</p>
 <ul class="simple">
-<li>Import hrpsys library (line 1)</li>
-<li>Invoke pkg-config command as a child process to get OpenHRP sample folder (line 4-5)</li>
-<li>Load the simulator (line 7-8)</li>
-<li>Load two box models and set its locations (line 9-11)</li>
-<li>Set collision between the boxes (line 12)</li>
-<li>Initialize and run the simulation for one second time period (line 13-14)</li>
+<li>Import hrpsys and hrpsysext libraries (line 1-2)</li>
+<li>Invoke pkg-config command as a child process to get OpenHRP sample folder (line 5-6)</li>
+<li>Load the simulator (line 8-9)</li>
+<li>Load two box models and set its locations (line 10-12)</li>
+<li>Set collision between the boxes (line 13)</li>
+<li>Initialize and run the simulation for one second time period (line 14-15)</li>
 </ul>
 <p>You can also construct whole the simulation world only by python script:</p>
 <div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -195,9 +197,11 @@
 21
 22
 23
-24</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">hrpsys</span>
+24
+25</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">hrpsys</span>
+<span class="kn">import</span> <span class="nn">hrpsysext</span>
 
-<span class="n">sim</span> <span class="o">=</span> <span class="n">hrpsys</span><span class="o">.</span><span class="n">Simulator</span><span class="p">()</span>
+<span class="n">sim</span> <span class="o">=</span> <span class="n">hrpsysext</span><span class="o">.</span><span class="n">Simulator</span><span class="p">()</span>
 <span class="n">sim</span><span class="o">.</span><span class="n">initViewer</span><span class="p">()</span>
 
 <span class="n">body</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">createBody</span><span class="p">(</span><span class="s">&quot;body&quot;</span><span class="p">)</span>
@@ -223,12 +227,12 @@
 </td></tr></table></div>
 <p>This script will:</p>
 <ul class="simple">
-<li>Import hrpsys library (line 1)</li>
-<li>Load the simulator (line 3-4)</li>
-<li>Create the body model by using cube primitive and color it as red (line 6-10)</li>
-<li>Create rotation joint and set each physical properties (line 12-18)</li>
-<li>Create second cube connected to the joint (line 19-21)</li>
-<li>Initialize and run the simulation for three seconds time period (line 23-24)</li>
+<li>Import hrpsys and hrpsysext libraries (line 1-2)</li>
+<li>Load the simulator (line 4-5)</li>
+<li>Create the body model by using cube primitive and color it as red (line 7-11)</li>
+<li>Create rotation joint and set each physical properties (line 13-19)</li>
+<li>Create second cube connected to the joint (line 20-22)</li>
+<li>Initialize and run the simulation for three seconds time period (line 24-25)</li>
 </ul>
 </div>
 

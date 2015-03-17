@@ -146,7 +146,9 @@
 <p class="last">ソースコードからのインストールは様々なライブラリをインストールしなければならないため推奨されません。通常はppaによるインストールを行ってください。</p>
 </div>
 <p>ソースコードからインストールするには、まず依存するライブラリをインストールする必要があります。</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install git jython doxygen ipython cmake libxml2-dev libsdl-dev libcv-dev libcvaux-dev libhighgui-dev libqhull-dev libglew-dev freeglut3-dev libxmu-dev python-dev libboost-python-dev libboost-thread-dev libboost-program-options-dev libboost-signals-dev libboost-regex-dev liblapack-dev libopencv-dev liblas-dev libeigen3-dev
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo add-apt-repository ppa:hrg/daily
+<span class="nv">$ </span>sudo apt-get update
+<span class="nv">$ </span>sudo apt-get install git jython doxygen ipython cmake openhrp libxml2-dev libsdl-dev libcv-dev libcvaux-dev libhighgui-dev libqhull-dev libglew-dev freeglut3-dev libxmu-dev python-dev libboost-python-dev libboost-thread-dev libboost-program-options-dev libboost-signals-dev libboost-regex-dev liblapack-dev libopencv-dev liblas-dev libeigen3-dev
 </pre></div>
 </div>
 <p>githubから最新のソースをクローンします。</p>

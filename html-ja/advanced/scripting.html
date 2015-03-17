@@ -146,13 +146,15 @@
 11
 12
 13
-14</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">hrpsys</span>
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">hrpsys</span>
+<span class="kn">import</span> <span class="nn">hrpsysext</span>
 <span class="kn">import</span> <span class="nn">commands</span>
 
 <span class="n">openhrp_dir</span> <span class="o">=</span> <span class="n">commands</span><span class="o">.</span><span class="n">getoutput</span><span class="p">(</span><span class="s">&quot;pkg-config --variable=prefix openhrp3.1&quot;</span><span class="p">)</span>
 <span class="n">model_dir</span><span class="o">=</span><span class="s">&quot;file://&quot;</span><span class="o">+</span><span class="n">openhrp_dir</span><span class="o">+</span><span class="s">&quot;/share/OpenHRP-3.1/sample/model/&quot;</span>
 
-<span class="n">sim</span> <span class="o">=</span> <span class="n">hrpsys</span><span class="o">.</span><span class="n">Simulator</span><span class="p">()</span>
+<span class="n">sim</span> <span class="o">=</span> <span class="n">hrpsysext</span><span class="o">.</span><span class="n">Simulator</span><span class="p">()</span>
 <span class="n">sim</span><span class="o">.</span><span class="n">initViewer</span><span class="p">()</span>
 <span class="n">box</span>  <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">loadBody</span><span class="p">(</span><span class="s">&quot;box&quot;</span><span class="p">,</span>  <span class="n">model_dir</span><span class="o">+</span><span class="s">&quot;box.wrl&quot;</span><span class="p">)</span>
 <span class="n">box</span><span class="o">.</span><span class="n">rootLink</span><span class="p">()</span><span class="o">.</span><span class="n">R</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
@@ -164,17 +166,17 @@
 </td></tr></table></div>
 <p>このスクリプトは:</p>
 <ul class="simple">
-<li><p class="first">hrpsysライブラリをインポート（１行目）</p>
+<li><p class="first">hrpsysライブラリとhrpsysextライブラリをインポート（1-2行目）</p>
 </li>
-<li><p class="first">pkg-configコマンドを子プロセスとして起動しOpenHRPサンプルフォルダを取得（4-5行目）</p>
+<li><p class="first">pkg-configコマンドを子プロセスとして起動しOpenHRPサンプルフォルダを取得（5-6行目）</p>
 </li>
-<li><p class="first">シミュレータのロード（7-8行目）</p>
+<li><p class="first">シミュレータのロード（8-9行目）</p>
 </li>
-<li><p class="first">２つの箱を作成し、位置を設定する（9-11行目）</p>
+<li><p class="first">２つの箱を作成し、位置を設定する（10-12行目）</p>
 </li>
-<li><p class="first">箱の間の干渉チェックを設定する（12行目）</p>
+<li><p class="first">箱の間の干渉チェックを設定する（13行目）</p>
 </li>
-<li><p class="first">シミュレーションを１秒間実行する（13-14行目）</p>
+<li><p class="first">シミュレーションを１秒間実行する（14-15行目）</p>
 </li>
 </ul>
 <p>Pythonスクリプトのみでシミュレーション世界全体を記述することもできます:</p>
@@ -201,9 +203,11 @@
 21
 22
 23
-24</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">hrpsys</span>
+24
+25</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">hrpsys</span>
+<span class="kn">import</span> <span class="nn">hrpsysext</span>
 
-<span class="n">sim</span> <span class="o">=</span> <span class="n">hrpsys</span><span class="o">.</span><span class="n">Simulator</span><span class="p">()</span>
+<span class="n">sim</span> <span class="o">=</span> <span class="n">hrpsysext</span><span class="o">.</span><span class="n">Simulator</span><span class="p">()</span>
 <span class="n">sim</span><span class="o">.</span><span class="n">initViewer</span><span class="p">()</span>
 
 <span class="n">body</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">createBody</span><span class="p">(</span><span class="s">&quot;body&quot;</span><span class="p">)</span>
@@ -229,17 +233,17 @@
 </td></tr></table></div>
 <p>このスクリプトは:</p>
 <ul class="simple">
-<li><p class="first">hrpsysライブラリをインポート（１行目）</p>
+<li><p class="first">hrpsysライブラリとhrpsysextライブラリをインポート（1-2行目）</p>
 </li>
-<li><p class="first">シミュレータをロードする（3-4行目）</p>
+<li><p class="first">シミュレータをロードする（4-5行目）</p>
 </li>
-<li><p class="first">プリミティブを使って赤色で箱型のモデルを作成する（6-10行目）</p>
+<li><p class="first">プリミティブを使って赤色で箱型のモデルを作成する（7-11行目）</p>
 </li>
-<li><p class="first">関節を作成し各物理パラメータを設定する（12-18行目）</p>
+<li><p class="first">関節を作成し各物理パラメータを設定する（13-19行目）</p>
 </li>
-<li><p class="first">２つ目の箱を作成し関節で接続する（19-21行目）</p>
+<li><p class="first">２つ目の箱を作成し関節で接続する（20-22行目）</p>
 </li>
-<li><p class="first">シミュレーションを初期化し３秒間実行する（23-24行目）</p>
+<li><p class="first">シミュレーションを初期化し３秒間実行する（24-25行目）</p>
 </li>
 </ul>
 </div>
