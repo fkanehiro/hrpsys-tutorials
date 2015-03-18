@@ -140,16 +140,22 @@
 </pre></div>
 </div>
 <p>We also need to install gazebo.
-Please refer to following page for installation of gazebo itself:</p>
-<p><a class="reference external" href="http://gazebosim.org/tutorials?tut=install_ubuntu&amp;cat=installation">http://gazebosim.org/tutorials?tut=install_ubuntu&amp;cat=installation</a></p>
-<p>Or refer to this page to install gazebo with DRC plugins and models:</p>
+Please refer to following page for installation of gazebo with DRC plugins and models:</p>
 <p><a class="reference external" href="https://bitbucket.org/osrf/drcsim/wiki/DRC/Install">https://bitbucket.org/osrf/drcsim/wiki/DRC/Install</a></p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo sh -c <span class="s1">&#39;echo &quot;deb http://packages.ros.org/ros/ubuntu trusty main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;</span>
+<span class="nv">$ </span>sudo sh -c <span class="s1">&#39;echo &quot;deb http://packages.osrfoundation.org/drc/ubuntu trusty main&quot; &gt; /etc/apt/sources.list.d/drc-latest.list&#39;</span>
+<span class="nv">$ </span>wget http://packages.ros.org/ros.key -O - <span class="p">|</span> sudo apt-key add -
+<span class="nv">$ </span>wget http://packages.osrfoundation.org/drc.key -O - <span class="p">|</span> sudo apt-key add -
+<span class="nv">$ </span>sudo apt-get update
+<span class="nv">$ </span>sudo apt-get install drcsim
+</pre></div>
+</div>
 <p>Clone most recent source from github.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git clone https://github.com/fkanehiro/hrpsys-base-gazebo.git
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git clone https://github.com/fkanehiro/hrpsys-gazebo-simulator.git
 </pre></div>
 </div>
 <p>Then, run cmake and make to configure, compile and install.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd </span>hrpsys-base-gazebo
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd </span>hrpsys-gazebo-simulator
 <span class="nv">$ </span>cmake .
 <span class="nv">$ </span>make
 <span class="nv">$ </span>sudo make install
