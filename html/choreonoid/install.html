@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Install &mdash; hrpsys tutorials 0.0.1 documentation</title>
@@ -14,7 +15,6 @@
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -36,7 +36,7 @@
         <link rel="prev" title="Use with Choreonoid" href="index.html"/> 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -48,8 +48,14 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-nav-search">
         
-          <a href="../index.html" class="fa fa-home"> hrpsys tutorials</a>
+
         
+          <a href="../index.html" class="icon icon-home"> hrpsys tutorials
+        
+
+        
+        </a>
+
         
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -58,6 +64,8 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
+
+        
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
@@ -66,10 +74,29 @@
           
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../basics/index.html">Basic Usage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../basics/install.html">Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../basics/run.html">Run your first simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../basics/project.html">Create your own project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../basics/connect.html">Connect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/install.html">Install</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../basics/install.html#install-using-ppa-recommended">Install using ppa (recommended)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/install.html#install-from-source">Install from source</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/run.html">Run your first simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../basics/run.html#hrpsys-simulator-command">hrpsys-simulator command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/run.html#running-the-example-project">Running the example project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/run.html#interact-with-the-simulation-window">Interact with the simulation window</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/project.html">Create your own project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../basics/project.html#basic-structure-of-project-file">Basic structure of project file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/project.html#change-robot-model">Change robot model</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/connect.html">Connect</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../basics/connect.html#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/connect.html#basic-structure-of-project-file">Basic structure of project file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/connect.html#create-instance-of-rt-component">Create instance of RT-component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/connect.html#connect-with-original-rt-component">Connect with original RT-component</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Advanced Topics</a><ul>
@@ -77,19 +104,62 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../gazebo/index.html">Use with Gazebo</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../gazebo/install.html">Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../gazebo/run.html">Run your first simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../gazebo/project.html">Create your own project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../gazebo/connect.html">Connect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gazebo/install.html">Install</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gazebo/install.html#install-from-source">Install from source</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gazebo/run.html">Run your first simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gazebo/run.html#hrpsys-gazebo-simulator-command">hrpsys-gazebo-simulator command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gazebo/run.html#running-sample-project">Running sample project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gazebo/run.html#interact-with-the-simulation-window">Interact with the simulation window</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gazebo/project.html">Create your own project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gazebo/project.html#convert-the-robot-model-and-create-simulation-world">Convert the robot model and create simulation world</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gazebo/project.html#basic-structure-of-project-file">Basic structure of project file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gazebo/project.html#change-robot-model">Change robot model</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gazebo/connect.html">Connect</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gazebo/connect.html#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gazebo/connect.html#basic-structure-of-project-file">Basic structure of project file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gazebo/connect.html#create-instance-of-rt-component">Create instance of RT-component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gazebo/connect.html#connect-with-original-rt-component">Connect with original RT-component</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../gazebo/launchscript.html">Integrate with ros stack</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Use with Choreonoid</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics.html">Controlling robot with forward and inverse kinematics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motion.html">Creating motion sequence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="physics.html">Physics simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="connect.html">Connect</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Install</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install-using-ppa-recommended">Install using ppa (recommended)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-from-source">Install from source</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics.html">Controlling robot with forward and inverse kinematics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kinematics.html#loading-the-robot-model">Loading the robot model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kinematics.html#control-the-robot-by-forward-kinematics">Control the robot by forward kinematics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kinematics.html#control-the-robot-by-inverse-kinematics">Control the robot by inverse kinematics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="motion.html">Creating motion sequence</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="motion.html#load-sample-project">Load sample project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="motion.html#configuration-for-your-own-project">Configuration for your own project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="motion.html#basic-motion-sequence-editing-process">Basic motion sequence editing process</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="physics.html">Physics simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="physics.html#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="physics.html#set-initial-pose">Set initial pose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="physics.html#run-the-simulation">Run the simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="connect.html">Connect</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="connect.html#load-sample-project">Load sample project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connect.html#configuration-for-your-own-project">Configuration for your own project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connect.html#run-the-simulation">Run the simulation</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -121,7 +191,9 @@
     <li>Install</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="../_sources/choreonoid/install.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/choreonoid/install.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
   </ul>
@@ -170,10 +242,10 @@ ppa based installation is highly recommended.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="kinematics.html" class="btn btn-neutral float-right" title="Controlling robot with forward and inverse kinematics">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="kinematics.html" class="btn btn-neutral float-right" title="Controlling robot with forward and inverse kinematics" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Use with Choreonoid"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="Use with Choreonoid" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -185,10 +257,10 @@ ppa based installation is highly recommended.</p>
         &copy; Copyright 2014, AIST.
     </p>
   </div>
-
   Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-  
+
 </footer>
+
         </div>
       </div>
 
