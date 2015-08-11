@@ -12,3 +12,4 @@ Contents:
    motion
    physics
    connect
+   toChoreonoid
